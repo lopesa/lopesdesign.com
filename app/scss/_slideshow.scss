@@ -1,0 +1,14 @@
+@import "palette";
+@import "typography";
+
+.slideshow {
+	width: 96%;
+	height:96vh;
+
+	margin: 2vh 2%;
+
+	background-color: $light-warm-grey-85;
+
+	position: absolute;
+	z-index: 5;
+}

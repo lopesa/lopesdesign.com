@@ -1,0 +1,37 @@
+@import "../../node_modules/sanitize.css/sanitize.css";
+@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+@import "menu";
+@import "home";
+@import "work";
+@import "about";
+@import "slideshow";
+
+body {
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 8em;
+	color: $light-warm-grey;
+
+	margin: 0;
+
+	@include freight-light;
+}
+
+
+h2 {
+	font-size: 6em;
+	color: $light-warm-grey;
+
+	margin: 0;
+
+	@include freight-light;
+	line-height: 1.4em;
+}
+
+li {
+	list-style-type: none;
+	color: inherit;
+}

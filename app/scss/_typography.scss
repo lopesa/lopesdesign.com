@@ -1,0 +1,29 @@
+@mixin acumin-extra-light {
+	font-family: "acumin-pro-semi-condensed",sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+@mixin freight-light {
+	font-family: "freight-sans-pro",sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+@mixin freight {
+	font-family: "freight-sans-pro",sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin freight-bold {
+	font-family: "freight-sans-pro",sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin kepler {
+	font-family: "kepler-std-extended-display",serif;
+	font-weight: 300;
+	font-style: normal;
+}

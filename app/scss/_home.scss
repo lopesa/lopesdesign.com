@@ -1,0 +1,48 @@
+@import "palette";
+@import "typography";
+
+.home {
+	width: 100%;
+	height: 100vh;
+
+	background-image: url('../img/culebrita.jpg');
+	background-size: cover;
+
+	overflow: hidden;
+
+	@include flexy(column);
+	justify-content: flex-start;
+	align-items: flex-start;
+
+
+	.underline {
+		width: 100%;
+		height: 4px;
+		margin: -10px 0 0 10px;
+		background-color: $red-orange-80;
+	}
+	
+	// h1 {
+	// 	font-size: 8em;
+	// 	color: $light-warm-grey;
+
+	// 	margin: 0;
+
+	// 	@include freight-light;
+
+	// 	&:nth-child(1) {
+	// 		line-height: 1.4em;
+	// 	}
+	// }
+
+	.ampersand {
+		@include kepler;
+		font-size: 30em;
+		color: $light-warm-grey;
+		opacity: 0.4;
+		position: absolute;
+		top: 152px;
+		left: -38px;
+		line-height: 1em;
+	}
+}

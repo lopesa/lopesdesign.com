@@ -1,0 +1,35 @@
+{
+  "name": "lopesdesign.com.react",
+  "version": "1.0.0",
+  "description": "the perpetual reworking of my portfolio website, this time using React.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --content-base public/ --inline",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tony Lopes",
+  "license": "ISC",
+  "dependencies": {
+    "history": "^3.0.0",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "react-redirect": "^1.0.0",
+    "react-router": "^2.5.2"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "breakpoint-sass": "^2.7.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.8.0",
+    "postcss-loader": "^0.9.1",
+    "sanitize.css": "^4.1.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
