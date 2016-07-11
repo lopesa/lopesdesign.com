@@ -1,101 +1,82 @@
 var React = require('react');
-var WorkCopy = require('../constants/WorkCopy');
+var WorkItems = require('../constants/WorkItems');
 var Slideshow = require('../components/Slideshow');
+var Card = require('../components/Card')
+var Cardholder = require('../components/Cardholder')
+
 
 var Work = React.createClass({
 	getInitialState: function() {
 		return {
-			workCopy: WorkCopy,
-      slideshowShowing: false
+			workItems: WorkItems,
+      slideshowShowing: false,
+      activeSlide: 1
 		}
 	},
+
+
+  setCategory: function(category) {
+    var newWorkItems = this.state.workItems.sort(function(a,b) {
+        // console.log(a.type)
+      if (a.type === category) {
+        console.log(true)
+        return -1;
+      }
+      if (a.type !== category) {
+        return 1
+      }
+      return 0
+    });
+
+    this.setState({workItems: newWorkItems});
+  },
+
+
+  initSlideshow: function(initialSlide) {
+
+    console.log('initialSlide: ', initialSlide)
+    
+    this.setState({activeSlide: initialSlide})
+    console.log(this.state.activeSlide)
+
+    console.log(this)
+    this.toggleSlideshow();
+
+  },
+
+
+  toggleSlideshow: function(initialSlide) {
+    // console.log(this.state.slideshowShowing)
+    // console.log('newSlideshowShowing', newSlideshowShowing);
+    // console.log(event.target);
+    // console.log('index', index)
+    
+    this.setState({slideshowShowing: !this.state.slideshowShowing});
+    // console.log(this.slideshowShowing)
+  },
+
   render: function(){
 
-    // console.log('initial', this.state.workCopy);
-  	
-  	var workDisplay = [];
+    // console.log("work.js: ", this)
 
-    var setCategory = function setCategory(category) {
+    // http://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children
+    var childrenWithProps = React.Children.map(this.props.children,
+      (child) => React.cloneElement(child, {
+         workItems: this.state.workItems,
+         activeSlide: this.state.activeSlide
+       }))
 
-      var newWorkCopy = this.state.workCopy.sort(function(a,b) {
-        // console.log(a.type)
-        if (a.type === category) {
-          console.log(true)
-          return -1;
-        }
-        if (a.type !== category) {
-          return 1
-        }
-        return 0
-      });
-
-      this.setState({workCopy: newWorkCopy});
-      
-      // console.log(this.state.workCopy);
-
-      // console.log(this.state.workCopy);
-      // console.log(this.state.workCopy.sort(function(a,b) {
-      //   // console.log(a.type)
-      //   if (a.type === category) {
-      //     console.log(true)
-      //     return -1;
-      //   }
-      //   if (a.type !== category) {
-      //     return 1
-      //   }
-      //   return 0
-      // }))
-    };
-
-    this.setCategory = setCategory;
-
-    var toggleSlideshow = function toggleSlideshow(newSlideshowShowing) {
-      // console.log(this);
-      this.setState({slideshowShowing: newSlideshowShowing});
-    }
-
-    this.toggleSlideshow = toggleSlideshow;
-
-
-  	for (var workItem in this.state.workCopy) {
-  		// console.log(this.state.workCopy[workItem].image);
-  		
-      var bgImg = {
-  			backgroundImage: 'url(../img/' + this.state.workCopy[workItem].image + ')'
-  			// backgroundImage: 'url(../img/' + workItem.img + ')'
-  		};
-
-      workDisplay.push(
-      	<div
-          className='card'
-          key={workItem}>
-          <div className='header'>
-	          <p className='title'>
-	          	{this.state.workCopy[workItem].title}
-	          </p>
-	           <p className='type'>
-	          	{this.state.workCopy[workItem].type}
-	          </p>
-	        </div>
-          <div
-          	className='image'
-          	style={bgImg}>
-          </div> 
-          <p className='copy'>
-          	{this.state.workCopy[workItem].copy}
-          </p>
-        </div>
-      )
-    }
+    
 
     return(
       <div className="work">
         <Slideshow
-          slides={this.state.workCopy}
+          slides={this.state.workItems}
           isShowing={this.state.slideshowShowing}
-          toggleSlideshow={this.toggleSlideshow.bind(this)}/>
+          activeSlide={this.state.activeSlide}
+          toggleSlideshow={this.toggleSlideshow} />
         <div className='work-header'>
-        	<h2 onClick={this.toggleSlideshow.bind(this)}>
+        	<h2>
         		Work
         	</h2>
           <ul>
@@ -104,9 +85,10 @@ var Work = React.createClass({
             <li onClick={this.setCategory.bind(this, 'video')}>Video / Motion</li>
           </ul>
         </div>
-      	<div className='card-container'>
-	        {workDisplay}
-	      </div>
+        
+        
+        {childrenWithProps}
+      	
       </div>
     )
   }

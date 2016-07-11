@@ -1,0 +1,31 @@
+@import "palette";
+@import "mixins";
+@import "typography";
+
+.slide {
+	
+	width: 100%;
+	height: 100%;
+
+	display: none;
+
+	&.active {
+		@include flexy(column);
+	}
+
+	.title {
+		@include freight-light;
+		font-size: 1.8em;
+	}
+
+	.image {
+		width: 100%;
+		height: 140px;
+		background-size: contain;
+	}
+
+	.copy {
+		@include freight-light;
+		font-size: 1.2em;
+	}
+}

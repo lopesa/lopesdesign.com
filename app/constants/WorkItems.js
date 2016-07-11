@@ -1,4 +1,4 @@
-var WorkCopy = [
+var WorkItems = [
 	{
 		type: 'web',
 		image: 'teamtedtile_sm.jpg',
@@ -41,4 +41,4 @@ var WorkCopy = [
 
 
 
-module.exports = WorkCopy;
+module.exports = WorkItems;

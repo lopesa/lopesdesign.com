@@ -1,0 +1,9 @@
+@import "mixins";
+
+.cardholder {
+	width: 95%;
+
+	@include flexy(row);
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}

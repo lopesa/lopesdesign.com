@@ -1,5 +1,6 @@
 @import "palette";
 @import "typography";
+@import "mixins";
 
 .slideshow {
 	width: 96%;
@@ -11,4 +12,11 @@
 
 	position: absolute;
 	z-index: 5;
+
+	button {
+		position: absolute;
+	}
+
+	// @include flexy(column)
+	// justify-content: flex-start;
 }

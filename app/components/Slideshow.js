@@ -1,34 +1,41 @@
 var React = require('react');
+var Slide = require('../components/Slide')
 
 var Slideshow = React.createClass({
 
+	handleClose: function(event) {
+		this.props.toggleSlideshow();
+	},
+
+	setVisible: function() {
+		if (this.props.isShowing) {
+			return {
+				display: 'flex'
+			}
+		}
+		else {
+			return {
+				display: 'none'
+			}
+		}
+	},
+
 	render: function(){
 
-		// console.log(this)
+		// console.log('from Slideshow.js', this.props.activeSlide)
 
-		console.log(this.props)
+		var slideArray = [];
 
-		var setVisible = function setVisible() {
-			if (this.props.isShowing) {
-				return {
-					display: 'flex'
-				}
-			}
-			else {
-				return {
-					display: 'none'
-				}
-			}
-		};
+  	for (var slide in this.props.workItems) {
+  		  
+      slideArray.push(
 
-		this.setVisible = setVisible;
-
-		var handleClose = function handleClose() {
-
-			this.props.toggleSlideshow(!this.props.isShowing);
-		};
-
-		this.handleClose = handleClose;
+        <Slide
+          content={this.props.workItems[slide]}
+          key={slide} 
+          active={slide === this.props.activeSlide} />
+      )
+    }
 
 		return (
 			<div
@@ -36,15 +43,13 @@ var Slideshow = React.createClass({
 				style={this.setVisible()}>
 				<button 
 					className="closeSlideshow"
-					onClick={this.handleClose.bind(this)}>
+					onClick={this.handleClose}>
 					&times;
 				</button>
+				{slideArray}
 			</div>
 		)
-
-
 	}
-
 });
 
 module.exports = Slideshow;
