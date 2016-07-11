@@ -7,9 +7,19 @@ var Cardholder = require('../components/Cardholder')
 
 var Work = React.createClass({
 	getInitialState: function() {
+
+    var workItemsWithUrls = WorkItems.map(function(item) {
+      // console.log(item);
+      item.url = item.title.replace(/ /g, '-').toLowerCase();
+      // console.log(item);
+      return item
+    });
+
+    // console.log('workItemsWithUrls: ',workItemsWithUrls)
+
 		return {
-			workItems: WorkItems,
-      slideshowShowing: false,
+			workItems: workItemsWithUrls,
+      // slideshowShowing: false,
       activeSlide: 1
 		}
 	},
@@ -57,7 +67,8 @@ var Work = React.createClass({
 
   render: function(){
 
-    // console.log("work.js: ", this)
+    // console.log("work.js: ", this.state)
+
 
     // http://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children
     var childrenWithProps = React.Children.map(this.props.children,
@@ -70,11 +81,11 @@ var Work = React.createClass({
 
     return(
       <div className="work">
-        <Slideshow
-          slides={this.state.workItems}
-          isShowing={this.state.slideshowShowing}
-          activeSlide={this.state.activeSlide}
-          toggleSlideshow={this.toggleSlideshow} />
+        {/*<Slideshow
+                  slides={this.state.workItems}
+                  isShowing={this.state.slideshowShowing}
+                  activeSlide={this.state.activeSlide}
+                  toggleSlideshow={this.toggleSlideshow} />*/}
         <div className='work-header'>
         	<h2>
         		Work

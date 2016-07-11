@@ -22,30 +22,25 @@ var Slideshow = React.createClass({
 
 	render: function(){
 
-		// console.log('from Slideshow.js', this.props.activeSlide)
+		console.log('from Slideshow.js', this.props.params.slideName)
 
 		var slideArray = [];
 
   	for (var slide in this.props.workItems) {
+
+  		console.log(this.props.workItems[slide].url)
   		  
       slideArray.push(
 
         <Slide
           content={this.props.workItems[slide]}
           key={slide} 
-          active={slide === this.props.activeSlide} />
+          active={this.props.workItems[slide].url === this.props.params.slideName} />
       )
     }
 
 		return (
-			<div
-				className="slideshow"
-				style={this.setVisible()}>
-				<button 
-					className="closeSlideshow"
-					onClick={this.handleClose}>
-					&times;
-				</button>
+			<div>	
 				{slideArray}
 			</div>
 		)

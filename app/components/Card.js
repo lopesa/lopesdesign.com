@@ -3,18 +3,22 @@ import { Link } from 'react-router'
 
 var Card = React.createClass({
 
+	
 
 	render: function(){
 
-		console.log(this.props)
+		// console.log('from card.js: ', this)
+
+		
 		
 		var bgImg = {
 			backgroundImage: 'url(../img/' + this.props.content.image + ')'
 		};
 
+
 		return(
-			<Link to={"/work:" + this.props.content.title} className='card'>
-			{/*<div className='card' onClick={this.props.initSlideshow}>*/}
+			<Link to={'work/' + this.props.content.url}
+				className='card' >
 	      <div className='header'>
 	        <p className='title'>
 	        	{this.props.content.title}

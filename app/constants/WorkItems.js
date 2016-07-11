@@ -8,7 +8,7 @@ var WorkItems = [
 	{
 		type: 'web',
 		image: 'writeonresumes_sm.jpg',
-		title: 'Write On Reumes',
+		title: 'Write On Resumes',
 		copy: 'lorem ipsum dolor sit amet'
 	},
 	{

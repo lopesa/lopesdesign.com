@@ -8,7 +8,7 @@ var Cardholder = React.createClass({
 
 	render: function(){
 
-		console.log(this)
+		// console.log(this.props)
 
 		var cardArray = [];
 
@@ -17,7 +17,8 @@ var Cardholder = React.createClass({
       cardArray.push(
         <Card 
           content={this.props.workItems[card]} 
-         	key={card} />
+         	key={card}
+          activeSlide={this.props.activeSlide} />
       )
     }
 
