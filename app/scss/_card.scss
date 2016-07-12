@@ -18,7 +18,15 @@
 	background-color: $white-50;
 	color: $warm-grey;
 
-	width: 23%;
+	width: 46%;
+
+	@include breakpoint($ipad) {
+		width: 31%;
+	}
+
+	@include breakpoint($ipad-wide) {
+		width: 23%;
+	}
 
 	margin: 0 1% 15px 1%;
 

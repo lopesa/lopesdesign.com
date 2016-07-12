@@ -8,25 +8,25 @@ var Slide = React.createClass({
 	// 	}
 	// },
 
-	rootClassNames() {
-		// http://stackoverflow.com/questions/30533171/react-js-conditionally-applying-class-attributes
-	  let names = ['slide'];
-	  if (this.props.active) names.push('active');
+	// rootClassNames() {
+	// 	// http://stackoverflow.com/questions/30533171/react-js-conditionally-applying-class-attributes
+	//   let names = ['slide'];
+	//   if (this.props.active) names.push('active');
 
-	  return names.join(' ');
-	},
+	//   return names.join(' ');
+	// },
 
 
 	render: function(){
 		// console.log(this.props.content)
-		// console.log(this.props.active);
+		// console.log("from Slide.js", this.props.content);
 
 		var bgImg = {
 			backgroundImage: 'url(../img/' + this.props.content.image + ')'
 		};
 
 		return(
-			<div className={this.rootClassNames()}>
+			<div className='slide'>
 	      <p className='title'>
         	{this.props.content.title}
         </p>

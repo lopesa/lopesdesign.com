@@ -1,0 +1,12 @@
+$big-phone: 359px;
+$iphone6plusCatcher: 412px;
+$phone-ipad: 550px;
+// $ipad: 768px;
+$ipad: 767px;
+$ipad-wide: 1024px;
+$real-wide: 1300px;
+
+// hate to do it
+// vertical breakpoints
+// $ipad-literal: (minwidth 767px) (minheight 1000px);
+$ipad-literal: (min-width 767px) (min-height 1000px);

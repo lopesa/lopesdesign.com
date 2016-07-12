@@ -10,13 +10,21 @@
 
 	background-color: $light-warm-grey-85;
 
-	position: absolute;
+	// position: absolute;
 	z-index: 5;
 
-	button {
-		position: absolute;
+	.button {
+		height: 100%;
+		width: 100px;
+
+		background-color: $red-orange-50;
+		// position: absolute;
+
+		&:hover {
+			background-color: $red-orange-80;
+		}
 	}
 
-	// @include flexy(column)
-	// justify-content: flex-start;
+	@include flexy(row)
+	justify-content: space-between;
 }
