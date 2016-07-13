@@ -15,16 +15,27 @@ var Work = React.createClass({
       return item
     });
 
-    // console.log('workItemsWithUrls: ',workItemsWithUrls)
 
-		return {
-			workItems: workItemsWithUrls,
-      // slideshowShowing: false,
-      activeSlide: 1
-		}
+    return {
+      workItems: workItemsWithUrls,
+      headerSize: this.getHeaderSize(this.props)
+    }
 	},
 
+  getHeaderSize: function(props) {
 
+      if (Object.keys(props.params).length === 1) {
+        
+        // console.log(Object.keys(props.params).length);
+        return {fontSize: "4em"}
+      }
+
+      else {
+        return {fontSize: "6em"}
+      }
+  
+  },
+    
   setCategory: function(category) {
     var newWorkItems = this.state.workItems.sort(function(a,b) {
         // console.log(a.type)
@@ -41,34 +52,19 @@ var Work = React.createClass({
     this.setState({workItems: newWorkItems});
   },
 
+  componentWillReceiveProps: function(nextProps) {
 
-  initSlideshow: function(initialSlide) {
-
-    console.log('initialSlide: ', initialSlide)
+    console.log(this.getHeaderSize(nextProps))
     
-    this.setState({activeSlide: initialSlide})
-    console.log(this.state.activeSlide)
+    this.setState({headerSize: this.getHeaderSize(nextProps)})
 
-    console.log(this)
-    this.toggleSlideshow();
-
+    // this.getHeaderSize(nextProps);
   },
 
 
-  toggleSlideshow: function(initialSlide) {
-    // console.log(this.state.slideshowShowing)
-    // console.log('newSlideshowShowing', newSlideshowShowing);
-    // console.log(event.target);
-    // console.log('index', index)
-    
-    this.setState({slideshowShowing: !this.state.slideshowShowing});
-    // console.log(this.slideshowShowing)
-  },
+ 
 
   render: function(){
-
-    // console.log("work.js: ", this.state)
-
 
     // http://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children
     var childrenWithProps = React.Children.map(this.props.children,
@@ -81,13 +77,9 @@ var Work = React.createClass({
 
     return(
       <div className="work">
-        {/*<Slideshow
-                  slides={this.state.workItems}
-                  isShowing={this.state.slideshowShowing}
-                  activeSlide={this.state.activeSlide}
-                  toggleSlideshow={this.toggleSlideshow} />*/}
+        
         <div className='work-header'>
-        	<h2>
+        	<h2 style={this.state.headerSize}>
         		Work
         	</h2>
           <ul>

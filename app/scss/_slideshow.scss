@@ -8,7 +8,7 @@
 
 	margin: 2vh 2%;
 
-	background-color: $light-warm-grey-85;
+	// background-color: $light-warm-grey-85;
 
 	// position: absolute;
 	z-index: 5;
@@ -17,11 +17,21 @@
 		height: 100%;
 		width: 100px;
 
-		background-color: $red-orange-50;
+		@include flexy(row)
+
+		@include freight-light;
+		font-size: 4em;
+
+		color: $red-orange;
+
+		text-decoration: none;
+
+		// background-color: $red-orange-50;
 		// position: absolute;
 
 		&:hover {
-			background-color: $red-orange-80;
+			// background-color: $red-orange-80;
+			color: $lime-crazy;
 		}
 	}
 

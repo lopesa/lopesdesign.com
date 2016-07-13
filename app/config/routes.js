@@ -13,10 +13,10 @@ var Slideshow = require('../components/Slideshow');
 // var Redirect = Router.Redirect;
 // var IndexRoute = Router.IndexRoute;
 
-import { Router, Route, Redirect, IndexRoute, Link, hashHistory } from 'react-router'
+import { Router, Route, Redirect, IndexRoute, Link } from 'react-router'
 
 module.exports = (
-	<Router history={hashHistory}>
+	<Router>
 	  <Route path="/" component={Main}>
 	    
 	    <IndexRoute component={Home} />

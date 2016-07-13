@@ -2,27 +2,44 @@ var React = require('react');
 
 var Slide = React.createClass({
 
-	// assignActive: function() {
-	// 	if (this.props.active) {
-	// 		return "display: flex"
-	// 	}
-	// },
+	parseLongCopy: function() {
 
-	// rootClassNames() {
-	// 	// http://stackoverflow.com/questions/30533171/react-js-conditionally-applying-class-attributes
-	//   let names = ['slide'];
-	//   if (this.props.active) names.push('active');
+		var newLongCopy = this.props.content.slide.longCopy.split('\n');
 
-	//   return names.join(' ');
-	// },
+		// console.log('newLongCopy', newLongCopy);
 
+
+		return newLongCopy;
+		
+
+	},
+
+	getInitialState: function() {
+
+		// this.parseLongCopy();
+
+		return {
+			parsedLongCopy: this.parseLongCopy()
+		}
+
+		// return null
+	},
 
 	render: function(){
-		// console.log(this.props.content)
-		// console.log("from Slide.js", this.props.content);
 
+		var longTextParagraphs = [];
+
+  	for (var paragraph in this.state.parsedLongCopy) {
+  		  
+      longTextParagraphs.push(
+        <p key={paragraph}> 
+        	{this.state.parsedLongCopy[paragraph]}
+        </p>
+      )
+    }
+		
 		var bgImg = {
-			backgroundImage: 'url(../img/' + this.props.content.image + ')'
+			backgroundImage: 'url(../img/' + this.props.content.slide.image + ')'
 		};
 
 		return(
@@ -34,9 +51,9 @@ var Slide = React.createClass({
 	      	className='image'
 	      	style={bgImg}>
 	      </div>
-	      <p className='copy'>
-	      	{this.props.content.copy}
-	      </p>
+	      <div className='copy'>
+	      	{longTextParagraphs}
+	      </div>
 	    </div>
 	  )
 		

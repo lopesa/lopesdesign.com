@@ -34,11 +34,11 @@ var Slideshow = React.createClass({
 
 	},
 	
-	getSlideFromUrl: function() {
+	getSlideFromUrl: function(passedProps) {
 
 		var thisSlide,
 			thisIndex,
-			url= this.props.params.slideName;
+			url= passedProps.params.slideName;
 
 		
 		this.props.workItems.forEach(function(item, index) {
@@ -46,7 +46,6 @@ var Slideshow = React.createClass({
 			if (item.url === url) {
 				thisSlide = item;
 				thisIndex = index;
-
 
 				return
 			}
@@ -59,10 +58,9 @@ var Slideshow = React.createClass({
 
 	},
 
-	getStateFromUrl: function() {
-		var thisSlide = this.getSlideFromUrl();
-
-		// console.log(thisSlide.thisIndex)
+	getStateFromUrl: function(passedProps) {
+		
+		var thisSlide = this.getSlideFromUrl(passedProps);
 
 		var previousSlideUrl = {
 			previousSlideUrl: this.getPreviousSlideUrl(thisSlide.thisIndex)
@@ -73,8 +71,6 @@ var Slideshow = React.createClass({
 		}
 
 		var finalSlide = Object.assign(thisSlide, previousSlideUrl, nextSlideUrl)
-		console.log(finalSlide)
-
 
 		return finalSlide;
 
@@ -82,109 +78,45 @@ var Slideshow = React.createClass({
 
 	getInitialState: function() {
 
-		return this.getStateFromUrl();
+		return this.getStateFromUrl(this.props);
 
 	},
 
 	// componentDidUpdate: function() {
-	// 	// 'from component did update'
-	// },
-
-	componentWillReceiveProps: function() {
 		
-		this.setState(this.getStateFromUrl());
+	// 	this.setState(this.getStateFromUrl());
+
+ //  },
+
+	componentWillReceiveProps: function(nextprops) {
+
+		// console.log(nextprops);
+		
+		this.setState(this.getStateFromUrl(nextprops));
 
   },
 
 
-	// getLink: function(direction) {
-
-
-
-	// 	console.log(this.props.workItems[this.state.thisIndex--].url);
-	// 	console.log(this.props.workItems[this.state.thisIndex++].url);
-
-	// 	// return this.props.workItems[this.state.thisIndex--].url
-	// 	if (direction === 'left') {
-
-	// 		return this.props.workItems[this.state.thisIndex--].url
-	// 	}
-
-	// 	else {
-			
-	// 		return this.props.workItems[this.state.thisIndex++].url
-	// 	}
-	// 	// return 'jews'
-
-	// },
-
-
-	// handleClose: function(event) {
-	// 	this.props.toggleSlideshow();
-	// },
-
-	// setVisible: function() {
-	// 	if (this.props.isShowing) {
-	// 		return {
-	// 			display: 'flex'
-	// 		}
-	// 	}
-	// 	else {
-	// 		return {
-	// 			display: 'none'
-	// 		}
-	// 	}
-	// },
-
-	
-
-	
-
 	render: function(){
-
 		
+		return (
+	   	<div className='slideshow'>
 
-		// var thisSlide = this.setSlideContent.bind(this);
-
-		// console.log('from Slideshow.js', this.props.params.slideName)
-		// console.log('from Slideshow.js', this.state.thisSlide);
-
-		// var slideArray = [];
-
-		// var bgImg = {
-		// 	backgroundImage: 'url(../img/' + this.state.thisSlide.image + ')'
-		// };
+	   		<Link to={'/work/' + this.state.previousSlideUrl}
+					className='button left' >
+					<div className='buttonIcon'>&lt;</div>
+				</Link>
 
 
-  	// for (var slide in this.props.workItems) {
+	   		<Slide content={this.state.thisSlide} />
 
-  	// 	// console.log(this.props.workItems[slide].url)
-  		  
-   //    slideArray.push(
+		    <Link to={'/work/' + this.state.nextSlideUrl}
+					className='button right' >
+					<div className='buttonIcon'>&gt;</div>
+				</Link>
 
-   //      <Slide
-   //        content={this.props.workItems[slide]}
-   //        key={slide} 
-   //        active={this.props.workItems[slide].url === this.props.params.slideName} />
-   //    )
-   //  }
-   return (
-   	<div className='slideshow'>
-   		
-   		{/*<button
-   			className='left'
-   			onClick={this.changeSlide.bind(null, 'left')} />*/}
-
-   		<Link to={'work/' + this.state.previousSlideUrl}
-				className='button left' />
-
-   		<Slide content={this.state.thisSlide} />
-
-	    <Link to={'work/' + this.state.nextSlideUrl}
-				className='button right' />
-
-	   </div>
-   )
+		  </div>
+	  )
 
 
 	}

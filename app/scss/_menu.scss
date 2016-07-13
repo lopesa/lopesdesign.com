@@ -6,16 +6,18 @@
 	position: fixed;
 	z-index: 10;
 
-	background-color: $white-70;
-
-	width: 23%;
-	// height: 50px;
-
-	top: 5%;
 	right: 30px;
 
 	@include flexy(row);
 	justify-content: flex-start;
+
+	&.home-menu {
+		a {
+			&:nth-child(1) {
+				display: none
+			}
+		}
+	}
 
 	a {
 		color: $white;
@@ -26,10 +28,55 @@
 
 		@include flexy(row);
 		justify-content: flex-start;
+
+		
+		&:nth-child(1) {
+			background-color: $red-orange-50;
+			
+		}
+
+		&:nth-child(2) {
+			background-color: $yellow-orange-50;
+		}
+
+		&:nth-child(3) {
+			background-color: $lime-crazy-50;
+		}
+
+		&:nth-child(4) {
+			background-color: $light-warm-grey-50;
+		}
+	}
+
+	&.home-menu {
+		top: 5%;
+
+		width: 23%;
+		
+		
+		ul {
+			@include flexy(column);
+		}
+
+		li {
+			height: 30px;
+		}
+	}
+
+	&.category-menu {
+		top: 0%;
+		
+		ul {
+			@include flexy(row);
+		}
+
+		li {
+			height: 20px;
+		}
+
 	}
 
 	ul {
-		@include flexy(column);
 		justify-content: flex-start;
 
 		padding: 0;
@@ -39,7 +86,7 @@
 		
 		li {
 			padding: 0 10px;
-			height: 30px;
+			
 
 			width: 100%;
 
@@ -48,21 +95,7 @@
 			@include flexy(row);
 			justify-content: flex-start;
 
-			&:nth-child(1) {
-				background-color: $red-orange-50;
-			}
-
-			&:nth-child(2) {
-				background-color: $yellow-orange-50;
-			}
-
-			&:nth-child(3) {
-				background-color: $lime-crazy-50;
-			}
-
-			&:nth-child(4) {
-				background-color: $light-warm-grey-50;
-			}
+			
 		}
 	}
 

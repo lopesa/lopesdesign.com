@@ -4,7 +4,7 @@
   "description": "the perpetual reworking of my portfolio website, this time using React.js",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base public/ --inline",
+    "dev": "webpack-dev-server --content-base public/ --inline --history-api-fallback",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tony Lopes",

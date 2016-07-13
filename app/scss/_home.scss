@@ -1,5 +1,6 @@
 @import "palette";
 @import "typography";
+@import "breakpoints";
 
 .home {
 	width: 100%;
@@ -13,6 +14,20 @@
 	@include flexy(column);
 	justify-content: flex-start;
 	align-items: flex-start;
+
+	h1 {
+		font-size: 6em;
+		color: $light-warm-grey;
+
+		margin: 0;
+
+		@include freight-light;
+
+		@include breakpoint($ipad) {
+			font-size: 8em;
+		}
+	}
+
 
 
 	.underline {

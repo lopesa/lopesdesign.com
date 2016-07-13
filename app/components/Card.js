@@ -17,7 +17,7 @@ var Card = React.createClass({
 
 
 		return(
-			<Link to={'work/' + this.props.content.url}
+			<Link to={'/work/' + this.props.content.url}
 				className='card' >
 	      <div className='header'>
 	        <p className='title'>

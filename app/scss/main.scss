@@ -22,14 +22,6 @@ body {
 	overflow: hidden;
 }
 
-h1 {
-	font-size: 8em;
-	color: $light-warm-grey;
-
-	margin: 0;
-
-	@include freight-light;
-}
 
 
 h2 {
@@ -40,6 +32,10 @@ h2 {
 
 	@include freight-light;
 	line-height: 1.4em;
+
+	.sub {
+		font-size: 3.5em;
+	}
 }
 
 li {
