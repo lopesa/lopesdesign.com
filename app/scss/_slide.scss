@@ -20,8 +20,22 @@
 
 	.image {
 		width: 100%;
-		height: 140px;
-		background-size: contain;
+		// height: 140px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+		
+		// @include flexy(row);
+		// justify-content: space-around;
+
+		div {
+			height: 100%;
+			width: auto;
+			background-size: contain;
+		}
+
 	}
 
 	.copy {
