@@ -27,7 +27,7 @@ var Work = React.createClass({
       if (Object.keys(props.params).length === 1) {
         
         // console.log(Object.keys(props.params).length);
-        return {fontSize: "4em"}
+        return {fontSize: "3.5em"}
       }
 
       else {

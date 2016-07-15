@@ -3,10 +3,12 @@
 @import "mixins";
 
 .slideshow {
-	width: 96%;
+	width: 100%;
 	height:96vh;
 
-	margin: 2vh 2%;
+	// margin: 2vh 2%;
+
+	
 
 	// background-color: $light-warm-grey-85;
 
@@ -19,19 +21,25 @@
 
 		@include flexy(row)
 
-		@include freight-light;
-		font-size: 4em;
+		@include freight-bold;
+		font-size: 3em;
 
-		color: $red-orange;
+		color: $white;
 
 		text-decoration: none;
 
-		// background-color: $red-orange-50;
+		padding: 15px 15px;
+
+		// to not fill padding with background-color
+		background-clip: content-box;
+
+		background-color: $yellow-orange-20;
 		// position: absolute;
 
 		&:hover {
 			// background-color: $red-orange-80;
-			color: $lime-crazy;
+			color: $red-orange;
+			background-color: $white-35;
 		}
 	}
 
