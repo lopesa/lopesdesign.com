@@ -6,4 +6,6 @@
 	@include flexy(row);
 	justify-content: flex-start;
 	flex-wrap: wrap;
+
+	overflow-y: scroll;
 }

@@ -16,10 +16,26 @@
 
 @import "about";
 
+////////////////////////////////
+// HIDING FOUT
+//
+// .wf-loading h1, .wf-loading h4, .wf-loading p, .wf-loading .category, .wf-loading .copyright, .wf-loading .title, .wf-loading form {
+// 	visibility: hidden;
+// }
+
+.wf-loading .ampersand, .wf-loading .name, .wf-loading .underline, .wf-loading h1, .wf-loading menu ul  {
+	visibility: hidden;
+}
+
 
 
 body {
 	overflow: hidden;
+}
+
+Link, a {
+	cursor: pointer;
+	text-decoration: none;
 }
 
 

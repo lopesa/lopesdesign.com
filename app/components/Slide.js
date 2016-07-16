@@ -7,62 +7,25 @@ var Slide = React.createClass({
 
 	parseLongCopy: function(props) {
 
-		// var newLongCopy = props.content.slide.longCopy.split('\n');
-
-		// var longTextParagraphs = [];
-		// console.log('newLongCopy', newLongCopy);
-
-		var translated = marked(props.content.slide.longCopy, {sanitize: true});
+		var translated = marked(props.content.slide.longCopy);
 
 		return translated
-
-
-
-
-  // 	for (var paragraph in newLongCopy) {
-  		  
-  //     longTextParagraphs.push(
-  //       <p key={paragraph}> 
-  //       	{newLongCopy[paragraph]}
-  //       </p>
-  //     )
-  //   }
-		
-		// return longTextParagraphs;
 
 	},
 
 	getInitialState: function() {
 
-		// this.parseLongCopy();
-
 		return {
 			parsedLongCopy: this.parseLongCopy(this.props)
 		}
 
-		// return null
 	},
 
 	componentWillReceiveProps: function(nextprops) {
 		this.setState({parsedLongCopy: this.parseLongCopy(nextprops)})
-		// parseLongCopy(nextprops)
 	},
 
-	// createLongTextParagraphs: function() {
-	// 	var longTextParagraphs = [];
-
- //  	for (var paragraph in this.state.parsedLongCopy) {
-  		  
- //      longTextParagraphs.push(
- //        <p key={paragraph}> 
- //        	{this.state.parsedLongCopy[paragraph]}
- //        </p>
- //      )
- //    }
-
- //    return longTextParagraphs;
-	// },
-
+	
 	render: function(){
 
 		// this.createLongTextParagraphs()
@@ -90,9 +53,9 @@ var Slide = React.createClass({
     // 	)
     // }
 		
-		var bgImg = {
-			backgroundImage: 'url(../img/' + this.props.content.slide.image + ')'
-		};
+		// var bgImg = {
+		// 	backgroundImage: 'url(../img/' + this.props.content.slide.image + ')'
+		// };
 
 		return(
 			<div className='slide'>
@@ -101,7 +64,9 @@ var Slide = React.createClass({
         </p>
         <div
 	      	className='image'>
-	      	<img src={'../img/' + this.props.content.slide.image} />
+	      	<a href={this.props.content.slide.linkOut}>
+		      	<img src={'../img/' + this.props.content.slide.image} />
+	      	</a>
 	      </div>
 	      <div className='copy' dangerouslySetInnerHTML={{__html: this.state.parsedLongCopy}}>
 	      </div>

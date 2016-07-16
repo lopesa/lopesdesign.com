@@ -1,7 +1,7 @@
 @import "palette";
 @import "mixins";
 @import "typography";
-@import "../../node_modules/sanitize.css/sanitize.css";
+// @import "../../node_modules/sanitize.css/sanitize.css";
 
 .slide {
 	
@@ -11,6 +11,8 @@
 	overflow-y: scroll;
 
 	background-color: $light-warm-grey-85;
+
+
 
 	// display: none;
 
@@ -34,9 +36,11 @@
 		width: 100%;
 		// height: 140px;
 
+
 		img {
 			width: 100%;
 			height: auto;
+		// cursor: pointer;
 		}
 		
 		// @include flexy(row);
@@ -55,5 +59,14 @@
 		color: $warm-grey;
 		font-size: 1.2em;
 		width: 60%;
+
+		a {
+			background-color: $red-orange-20;
+			color: $warm-grey;
+		}
+	}
+
+	iframe {
+		margin-bottom: 15px;
 	}
 }

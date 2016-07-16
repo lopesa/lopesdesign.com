@@ -103,7 +103,7 @@ var Slideshow = React.createClass({
 	   	<div className='slideshow'>
 
 	   		<Link to={'/work/' + this.state.previousSlideUrl}
-					className='button left' >
+					className='button left'>
 					<div className='buttonIcon'>&lt;</div>
 				</Link>
 

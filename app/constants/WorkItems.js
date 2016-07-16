@@ -12,7 +12,7 @@ var WorkItems = [
 I also spent time on the slideshow on this project. Slideshows tend to live somewhere in most projects I do, so over time I've been zeroing in on my perfect implementation of one. (I tend to avoid plug-ins in favor of diy, and I've been d'ing my y (o) slideshow for a while now). Anyway this one turned out really well. I got it most of the way there and then ended up following a tutorial by a squarespace guy for the sweet mobile slide action.
 
 Finally, this site is also built in a truly progressively enhanced way. Go ahead, turn off javascript, it'll still work fine! It just uses a bunch of, you know, going back and forth to the server, old school style. It's built using simple technologies, other than languages themselves, just jQuery really.`,
-			somethingelse: 'whatever'
+			linkOut: 'http://teamtedtile.com'
 		}
 	},
 	// Virgin America
@@ -26,7 +26,7 @@ Finally, this site is also built in a truly progressively enhanced way. Go ahead
 			longCopy: `Enterprise web work. I worked for two years at Virgin America as the marketing department web developer. The work encompassed digital marketing, email, and web production, design and development, all wrapped up in different ways at different times. The bottom line of course being to take care of the awesome brand that is Virgin America.
 
 My time with VX also encompassed the complete revision of the website for which I served as the producer of the change for all things content related (as differentiated from the ticket booking 'machine').`,
-			somethingelse: 'whatever'
+			linkOut: 'whatever'
 		}
 	},
 	// Free Code Camp
@@ -37,68 +37,85 @@ My time with VX also encompassed the complete revision of the website for which 
 		copy: 'Skill building fun school',
 		slide: {
 			image: 'fcc.png',
-			longCopy: `Free Code Camp is an outstanding resource that I've been using to solidify much of my core javascript knowledge, as well as to build that knowledge out. Coming at web development from the visual side I never, say, wrote many algorithms. So this has been a great chance to take a step back and do much of that sort of thing.
+			longCopy: `Free Code Camp is an outstanding resource that I've been using to solidify much of my core javascript knowledge, as well as to build that knowledge out. Coming at web development from the visual side I never, say, wrote many algorithms. And I had been realizing over time that that was something that was keeping me from being as strong a web dev as I wanted. So it was looking like dev boot camp for me, but then I found fcc, and I really can't say enough good things about it. I'm so glad I found it.
+
+Here are links to most of the projects I've made so far:
 
 #### [Algorithms](https://github.com/lopesa/freecodecamp-projects/blob/master/algorithms.js)
 
 #### Front End Projects  
 Calculator  
-Pomodoro Clock  
+
+<iframe height='398' scrolling='no' src='//codepen.io/lopesa/embed/aNNzrR/?height=398&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/aNNzrR/'>Pomodoro Clock - FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+
+<iframe height='377' scrolling='no' src='//codepen.io/lopesa/embed/qbeKOY/?height=377&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/qbeKOY/'>Random Quote Machine - FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+
 "Random" quote generator (which I include mostly because I found a pretty hilarious bunch of programmers' code comments)
 
 #### React.js Projects
-Markdown Translator  
+
+<iframe height='486' scrolling='no' src='//codepen.io/lopesa/embed/BKxroB/?height=486&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/BKxroB/'>React.js Markdown Translator — FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+
+<iframe height='461' scrolling='no' src='//codepen.io/lopesa/embed/VagvgK/?height=461&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/VagvgK/'>React.js api consumption — FCC Leaderboard </a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
 Free Code Camp brownie points leader board (api consumption)
 
-#### Apis  
-Built with Node.js and Express. These are on heroku on their sandbox servers, so they take a moment to "Wake up". They are a good exercise though, in using all public servers instead of setting up from a linux box like I usually do.  
+#### Api builds  
+Built with Node.js and Express. These are on heroku on their sandbox servers, so they take a moment to "Wake up". That's a good exercise though, in using all public servers instead of setting up from a linux box like I usually do. Scaling and whatnot.  
+
 [unix time converter](http://timestamp-microsvc.herokuapp.com/)  
 [url shortener](http://url-shortify.herokuapp.com/)`,
-			somethingelse: 'whatever'
+			linkOut: 'whatever'
+		}
+	},
+	{
+		type: 'photo',
+		image: 'photography_sm.jpg',
+		title: 'My Photography Practice',
+		copy: 'This life through a lens',
+		slide: {
+			image: 'photography.png',
+			longCopy: "I've been taking photos most of my life. Photography is one of the mediums I've been with the longest and I love it because it's so accessible. And yet deceptively so. While it's fairly easy to get a good photo, it's very challenging to get something that goes beyond that. At the moment I find myself taking shots of travel, nature, food, things at macro level and sometimes when I'm really feeling transcendent, abstract shots and textural things.",
+			linkOut: 'https://www.flickr.com/photos/57613898@N08/'
 		}
 	},
 	{
 		type: 'photo',
 		image: 'fpo.jpg',
-		title: 'Photo 1',
-		copy: 'photo ipsum dolor sit amet',
+		title: 'Old Navy Photography Work',
+		copy: 'Core work',
 		slide: {
-			image: 'fpo.jpg',
+			image: 'ONphotos.jpg',
 			longCopy: 'Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.\nGumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.\nTurnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.',
-			somethingelse: 'whatever'
-		}
-	},
-	{
-		type: 'photo',
-		image: 'fpo.jpg',
-		title: 'Photo 2',
-		copy: 'photo ipsum dolor sit amet',
-		slide: {
-			image: 'teamtedtile.jpg',
-			longCopy: 'Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.\nGumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.\nTurnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.',
-			somethingelse: 'whatever'
+			linkOut: null
 		}
 	},
 	{
 		type: 'video',
-		image: 'fpo.jpg',
-		title: 'Video 1',
-		copy: 'Video ipsum dolor sit amet',
+		image: 'studiospotlight_sm.jpg',
+		title: 'Motion and Animation',
+		copy: 'So much fun!',
 		slide: {
 			image: 'teamtedtile.jpg',
-			longCopy: 'Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.\nGumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.\nTurnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.',
-			somethingelse: 'whatever'
+			longCopy: `<iframe width="560" height="315" src="https://www.youtube.com/embed/GXYYGAYln-w" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/K4rPWKc46oM" frameborder="0" allowfullscreen></iframe>`,
+			// longCopy: `<p>some p</p>`,
+			linkOut: 'whatever'
 		}
 	},
 	{
 		type: 'video',
-		image: 'fpo.jpg',
-		title: 'Video 2',
-		copy: 'Video ipsum dolor sit amet',
+		image: 'videos_sm.jpg',
+		title: 'Short Videos',
+		copy: 'Puttin it all together',
 		slide: {
 			image: 'teamtedtile.jpg',
-			longCopy: 'Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.\nGumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.\nTurnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.',
-			somethingelse: 'whatever'
+			longCopy: `<iframe width="560" height="315" src="https://www.youtube.com/embed/Y5zMdyJ5lLQ" frameborder="0" allowfullscreen></iframe>  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G-j2Gycr9WY" frameborder="0" allowfullscreen></iframe>`,
+			linkOut: 'whatever'
 		}
 	}
 
