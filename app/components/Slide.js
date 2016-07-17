@@ -62,12 +62,18 @@ var Slide = React.createClass({
 	      <p className='title'>
         	{this.props.content.title}
         </p>
-        <div
-	      	className='image'>
-	      	<a href={this.props.content.slide.linkOut}>
-		      	<img src={'../img/' + this.props.content.slide.image} />
-	      	</a>
-	      </div>
+        
+        {(function(props) {
+          if (props.image) {
+            return (<div
+							      	className='image'>
+							      	<a href={props.linkOut}>
+								      	<img src={'../img/' + props.image} />
+							      	</a>
+							      </div>); 
+          } 
+        })(this.props.content.slide)}
+        
 	      <div className='copy' dangerouslySetInnerHTML={{__html: this.state.parsedLongCopy}}>
 	      </div>
 	    </div>

@@ -4,3 +4,8 @@
 	align-items: center;
 	flex-direction: $direction;
 }
+
+@mixin base-transition {
+	// transition: all 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, background-color 0.15s ease-out, opacity 0.2s ease-in-out;
+}

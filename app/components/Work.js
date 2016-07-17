@@ -54,7 +54,7 @@ var Work = React.createClass({
 
   componentWillReceiveProps: function(nextProps) {
 
-    console.log(this.getHeaderSize(nextProps))
+    // console.log(this.getHeaderSize(nextProps))
     
     this.setState({headerSize: this.getHeaderSize(nextProps)})
 

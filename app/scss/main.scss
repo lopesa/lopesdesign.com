@@ -29,6 +29,8 @@
 
 
 
+
+
 body {
 	overflow: hidden;
 }
@@ -57,4 +59,27 @@ h2 {
 li {
 	list-style-type: none;
 	color: inherit;
+}
+
+.copy {
+
+	@include freight-light;
+	color: $warm-grey;
+	font-size: 1.2em;
+	width: 60%;
+
+	strong {
+		@include freight-semibold;
+	}
+
+	a {
+		@include base-transition;
+
+		background-color: $red-orange-20;
+		color: $warm-grey;
+
+		&:hover {
+			background-color: $red-orange-50;
+		}
+	}
 }

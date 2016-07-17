@@ -36,33 +36,36 @@ My time with VX also encompassed the complete revision of the website for which 
 		title: 'Free Code Camp',
 		copy: 'Skill building fun school',
 		slide: {
-			image: 'fcc.png',
-			longCopy: `Free Code Camp is an outstanding resource that I've been using to solidify much of my core javascript knowledge, as well as to build that knowledge out. Coming at web development from the visual side I never, say, wrote many algorithms. And I had been realizing over time that that was something that was keeping me from being as strong a web dev as I wanted. So it was looking like dev boot camp for me, but then I found fcc, and I really can't say enough good things about it. I'm so glad I found it.
+			longCopy: `[Free Code Camp](http://freecodecamp.com) is an outstanding, free, opensource resource that I've been using since late 2015 to solidify my core javascript skills, and to build out their curriculum's skillset, which is React, Express, Mongo, Node, and d3 for good measure. Coming at web development from the visual side I never, say, wrote many algorithms. And I had been realizing over time that that was something that was keeping me from being as strong a web dev as I wanted. So it was looking like dev boot camp for me, but then I found fcc, and I really can't say enough good things about it. I'm so glad I found it.
 
-Here are links to most of the projects I've made so far:
+Here are embeds or links to most of the projects I've made so far:
 
 #### [Algorithms](https://github.com/lopesa/freecodecamp-projects/blob/master/algorithms.js)
 
 #### Front End Projects  
-Calculator  
+Calculator 
+
+"Pomodoro Clock", to make sure you don't take too many facebook breaks. So it's a work-break timer thing. I worked on a UI that reflected that we are looking at the **relationship** between work periods and break periods 
 
 <iframe height='398' scrolling='no' src='//codepen.io/lopesa/embed/aNNzrR/?height=398&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/aNNzrR/'>Pomodoro Clock - FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
 
-<iframe height='377' scrolling='no' src='//codepen.io/lopesa/embed/qbeKOY/?height=377&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/qbeKOY/'>Random Quote Machine - FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+"Random" (ok, so it picks from, like, 10) quote generator, which I include mostly because I found a pretty hilarious bunch of programmers' code comments
 
-"Random" quote generator (which I include mostly because I found a pretty hilarious bunch of programmers' code comments)
+<iframe height='377' scrolling='no' src='//codepen.io/lopesa/embed/qbeKOY/?height=377&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/qbeKOY/'>Random Quote Machine - FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
 
 #### React.js Projects
 
+Markdown Translator. Type **here**, watch it update **there**.
+
 <iframe height='486' scrolling='no' src='//codepen.io/lopesa/embed/BKxroB/?height=486&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/BKxroB/'>React.js Markdown Translator — FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+
+Free Code Camp Brownie Points leader board. (Brownie Points are awarded for answering questions on the gitter boards.) Consumes an api from here: https://fcctop100.herokuapp.com/api/fccusers/top/recent (or /allTime, instead of /recent)
 
 <iframe height='461' scrolling='no' src='//codepen.io/lopesa/embed/VagvgK/?height=461&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/VagvgK/'>React.js api consumption — FCC Leaderboard </a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-Free Code Camp brownie points leader board (api consumption)
-
 #### Api builds  
-Built with Node.js and Express. These are on heroku on their sandbox servers, so they take a moment to "Wake up". That's a good exercise though, in using all public servers instead of setting up from a linux box like I usually do. Scaling and whatnot.  
+Built with Node.js and Express. These are on heroku on their sandbox servers, so they take a moment to "Wake up". That's a good exercise of course, in using all public servers instead of setting up from a linux box like I usually do. Scaling and whatnot.  
 
 [unix time converter](http://timestamp-microsvc.herokuapp.com/)  
 [url shortener](http://url-shortify.herokuapp.com/)`,
@@ -76,18 +79,21 @@ Built with Node.js and Express. These are on heroku on their sandbox servers, so
 		copy: 'This life through a lens',
 		slide: {
 			image: 'photography.png',
-			longCopy: "I've been taking photos most of my life. Photography is one of the mediums I've been with the longest and I love it because it's so accessible. And yet deceptively so. While it's fairly easy to get a good photo, it's very challenging to get something that goes beyond that. At the moment I find myself taking shots of travel, nature, food, things at macro level and sometimes when I'm really feeling transcendent, abstract shots and textural things.",
+			longCopy: `I've been taking photos most of my life. Photography is one of the mediums I've been with the longest and I love it because it's so accessible. And yet deceptively so. While it's fairly easy to get a good photo, it can be very challenging to get something that goes beyond that. (It can be magically simple too, but that's a different story.)
+
+At the moment I find myself taking shots of travel, nature, food, things at macro level and sometimes when I'm really feeling transcendent, abstract shots and textural things.`,
 			linkOut: 'https://www.flickr.com/photos/57613898@N08/'
 		}
 	},
 	{
 		type: 'photo',
-		image: 'fpo.jpg',
+		image: 'on-photography_sm.jpg',
 		title: 'Old Navy Photography Work',
 		copy: 'Core work',
 		slide: {
-			image: 'ONphotos.jpg',
-			longCopy: 'Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.\nGumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.\nTurnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.',
+			image: 'on-photography.jpg',
+			// longCopy: `![](../img/on-denim-wall.jpg)`,
+			longCopy: ``,
 			linkOut: null
 		}
 	},
@@ -95,9 +101,8 @@ Built with Node.js and Express. These are on heroku on their sandbox servers, so
 		type: 'video',
 		image: 'studiospotlight_sm.jpg',
 		title: 'Motion and Animation',
-		copy: 'So much fun!',
+		copy: 'Just plain fun!',
 		slide: {
-			image: 'teamtedtile.jpg',
 			longCopy: `<iframe width="560" height="315" src="https://www.youtube.com/embed/GXYYGAYln-w" frameborder="0" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K4rPWKc46oM" frameborder="0" allowfullscreen></iframe>`,
@@ -109,9 +114,8 @@ Built with Node.js and Express. These are on heroku on their sandbox servers, so
 		type: 'video',
 		image: 'videos_sm.jpg',
 		title: 'Short Videos',
-		copy: 'Puttin it all together',
+		copy: 'Putting it all together',
 		slide: {
-			image: 'teamtedtile.jpg',
 			longCopy: `<iframe width="560" height="315" src="https://www.youtube.com/embed/Y5zMdyJ5lLQ" frameborder="0" allowfullscreen></iframe>  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G-j2Gycr9WY" frameborder="0" allowfullscreen></iframe>`,

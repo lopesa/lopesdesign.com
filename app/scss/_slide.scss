@@ -54,17 +54,28 @@
 
 	}
 
-	.copy {
-		@include freight-light;
-		color: $warm-grey;
-		font-size: 1.2em;
-		width: 60%;
+	// .copy {
 
-		a {
-			background-color: $red-orange-20;
-			color: $warm-grey;
-		}
-	}
+	// 	@include freight-light;
+	// 	color: $warm-grey;
+	// 	font-size: 1.2em;
+	// 	width: 60%;
+
+	// 	strong {
+	// 		@include freight-semibold;
+	// 	}
+
+	// 	a {
+	// 		@include base-transition;
+
+	// 		background-color: $red-orange-20;
+	// 		color: $warm-grey;
+
+	// 		&:hover {
+	// 			background-color: $red-orange-50;
+	// 		}
+	// 	}
+	// }
 
 	iframe {
 		margin-bottom: 15px;
