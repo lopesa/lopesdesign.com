@@ -23,7 +23,7 @@ Finally, this site is also built in a truly progressively enhanced way. Go ahead
 		copy: 'Enterprise web work',
 		slide: {
 			image: 'virgin.png',
-			longCopy: `Enterprise web work. I worked for two years at Virgin America as the marketing department web developer. The work encompassed digital marketing, email, and web production, design and development, all wrapped up in different ways at different times. The bottom line of course being to take care of the awesome brand that is Virgin America.
+			longCopy: `Enterprise web work. I worked for two years at Virgin America as the marketing department web developer. The work encompassed digital marketing, email, and web production, design and development, all wrapped up in different ways at different times. The bottom line of course being to take care of the awesome brand that is (soon to be was, lame.) Virgin America.
 
 My time with VX also encompassed the complete revision of the website for which I served as the producer of the change for all things content related (as differentiated from the ticket booking 'machine').`,
 			linkOut: 'whatever'
@@ -36,7 +36,7 @@ My time with VX also encompassed the complete revision of the website for which 
 		title: 'Free Code Camp',
 		copy: 'Skill building fun school',
 		slide: {
-			longCopy: `[Free Code Camp](http://freecodecamp.com) is an outstanding, free, opensource resource that I've been using since late 2015 to solidify my core javascript skills, and to build out their curriculum's skillset, which is React, Express, Mongo, Node, and d3 for good measure. Coming at web development from the visual side I never, say, wrote many algorithms. And I had been realizing over time that that was something that was keeping me from being as strong a web dev as I wanted. So it was looking like dev boot camp for me, but then I found fcc, and I really can't say enough good things about it. I'm so glad I found it.
+			longCopy: `[Free Code Camp](http://freecodecamp.com) is an outstanding, free, opensource resource that I've been using since late 2015 to solidify my core javascript skills, and to build out their curriculum's skillset, which is React, Express, Mongo, Node, and d3 for good measure. Coming at web development from the visual side I never, say, wrote many algorithms. And I had been realizing over time that that was something that was keeping me from being as strong a web dev as I wanted. So it was looking like dev boot camp for me, but then I found fcc, and I really can't say enough good things about it. My favorite thing about it is that someone could use it with, say, a $100 raspberry pi, and become the next Zuckerburg. Anyway, I'm so glad I found it.
 
 Here are embeds or links to most of the projects I've made so far:
 
@@ -76,10 +76,10 @@ Built with Node.js and Express. These are on heroku on their sandbox servers, so
 		type: 'photo',
 		image: 'photography_sm.jpg',
 		title: 'My Photography',
-		copy: 'This life through a lens',
+		copy: 'My life through a lens',
 		slide: {
 			image: 'photography.png',
-			longCopy: `I've been taking photos most of my life. Photography is one of the mediums I've been with the longest and I love it because it's so accessible. And yet deceptively so. While it's fairly easy to get a good photo, it can be very challenging to get something that goes beyond that. (It can be magically simple too, but that's a different story.)
+			longCopy: `I've been taking photos most of my life, so it's one of the mediums I've been with the longest and I love it because it's so accessible. And yet deceptively so. While it's fairly easy to get a good photo, it can be very challenging to get something that goes beyond that. (It can be magically simple too, but that's a different story.)
 
 At the moment I find myself taking shots of travel, nature, food, things at macro level and sometimes when I'm really feeling transcendent, abstract shots and textural things.`,
 			linkOut: 'https://www.flickr.com/photos/57613898@N08/'
