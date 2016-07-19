@@ -2,10 +2,48 @@
 
 .cardholder {
 	width: 95%;
-
-	@include flexy(row);
-	justify-content: flex-start;
-	flex-wrap: wrap;
-
+	height: 100%;
 	overflow-y: scroll;
+
+	flex-grow: 0;
+	flex-shrink: 0;
+
+	span {
+
+		&:nth-child(1) {
+			width: 100%;
+			heigth: 100%;
+			@include flexy(row);
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+
+	}
+
+	.example-enter {
+	  opacity: 0.01;
+	  transition: opacity .5s ease-in;
+	}
+
+	.example-enter.example-enter-active {
+	  opacity: 1;
+	}
+
+	.example-leave {
+	  opacity: 1;
+	  transition: opacity .5s ease-in;
+	}
+
+	.example-leave.example-leave-active {
+	  opacity: 0;
+	}
+
+	.example-appear {
+	  opacity: 0.01;
+	}
+
+	.example-appear.example-appear-active {
+	  opacity: 1;
+	  transition: opacity .5s ease-in;
+	}
 }

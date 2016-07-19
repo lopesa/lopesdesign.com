@@ -1,6 +1,8 @@
 var React = require('react');
 var marked = require('marked');
 
+import { findDOMNode } from 'react-dom';
+
 // import marked from 'marked';
 
 var Slide = React.createClass({
@@ -25,37 +27,22 @@ var Slide = React.createClass({
 		this.setState({parsedLongCopy: this.parseLongCopy(nextprops)})
 	},
 
+
+	// http://stackoverflow.com/questions/30764693/animate-component-when-state-changes-in-react-js
+	// componentWillUpdate: function() {
+ //    findDOMNode(this).classList.add("leave");
+ //  },
+
+ //  componentDidUpdate: function() {
+ //    var el = findDOMNode(this);
+ //    setTimeout(function(){
+ //       el.classList.remove("leave");
+ //    }, 1000);
+	// },
+
+
 	
 	render: function(){
-
-		// this.createLongTextParagraphs()
-
-		// var longTextParagraphs = [];
-
-  // 	for (var paragraph in this.state.parsedLongCopy) {
-  		  
-  //     longTextParagraphs.push(
-  //       <p key={paragraph}> 
-  //       	{this.state.parsedLongCopy[paragraph]}
-  //       </p>
-  //     )
-  //   }
-
-    // var images = [];
-
-    // for (var image in this.props.content.slide.images) {
-
-    // 	// console.log(this.props.content.slide.images[image]);
-    // 	images.push(
-    // 		<div style={{backgroundImage: 'url(../img/' + this.props.content.slide.images[image] + ')'}}
-    // 			key={image} >
-    // 		</div>
-    // 	)
-    // }
-		
-		// var bgImg = {
-		// 	backgroundImage: 'url(../img/' + this.props.content.slide.image + ')'
-		// };
 
 		return(
 			<div className='slide'>

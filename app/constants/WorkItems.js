@@ -75,7 +75,7 @@ Built with Node.js and Express. These are on heroku on their sandbox servers, so
 	{
 		type: 'photo',
 		image: 'photography_sm.jpg',
-		title: 'My Photography Practice',
+		title: 'My Photography',
 		copy: 'This life through a lens',
 		slide: {
 			image: 'photography.png',
@@ -88,7 +88,7 @@ At the moment I find myself taking shots of travel, nature, food, things at macr
 	{
 		type: 'photo',
 		image: 'on-photography_sm.jpg',
-		title: 'Old Navy Photography Work',
+		title: 'Old Navy Photography',
 		copy: 'Core work',
 		slide: {
 			image: 'on-photography.jpg',

@@ -32,22 +32,22 @@ var Menu = React.createClass({
 	        role="navigation"
 	        className={this.setMenuStyle()}>
 	        <ul>
-	          <Link to={"/"}>
+	          <Link to={"/"} activeClassName="active">
 	            <li>
 	              Home
 	            </li>
 	          </Link>
-          	<Link to={'/work/'}>
+          	<Link to={'/work/'} activeClassName="active">
 		          <li>
 	           		Work
 		          </li>
 		        </Link>
-		        <Link to={'/about/'}>
+		        <Link to={'/about/'} activeClassName="active">
 		          <li>
 		            About
 		          </li>
 		        </Link>
-		        <Link to={'/blog/'}>
+		        <Link to={'/blog/'} activeClassName="active">
 		        	<li>
 		            Blog
 		          </li>

@@ -10,6 +10,7 @@
 	background-size: cover;
 
 
+
 	@include flexy(column);
 	
 	align-items: flex-start;
@@ -27,7 +28,9 @@
 
 
 	.copy {
-		background-color: $white-70;
+		background-color: $dark-warm-grey;
+		mix-blend-mode: multiply;
+		width: 60%;
 	}
 
 

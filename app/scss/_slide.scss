@@ -10,7 +10,7 @@
 
 	overflow-y: scroll;
 
-	background-color: $light-warm-grey-85;
+	// background-color: $light-warm-grey-85;
 
 
 
@@ -54,30 +54,20 @@
 
 	}
 
-	// .copy {
+	.copy {
 
-	// 	@include freight-light;
-	// 	color: $warm-grey;
-	// 	font-size: 1.2em;
-	// 	width: 60%;
+		width: 60%;
 
-	// 	strong {
-	// 		@include freight-semibold;
-	// 	}
-
-	// 	a {
-	// 		@include base-transition;
-
-	// 		background-color: $red-orange-20;
-	// 		color: $warm-grey;
-
-	// 		&:hover {
-	// 			background-color: $red-orange-50;
-	// 		}
-	// 	}
-	// }
+	}
 
 	iframe {
 		margin-bottom: 15px;
+	}
+
+	@include base-transition;
+
+	&.leave {
+		opacity: 0;
+
 	}
 }

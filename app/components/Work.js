@@ -18,9 +18,16 @@ var Work = React.createClass({
 
     return {
       workItems: workItemsWithUrls,
-      headerSize: this.getHeaderSize(this.props)
+      headerSize: this.getHeaderSize(this.props),
+      menuState: 'cardHolder'
     }
 	},
+
+  toggleMenuState: function() {
+    
+    this.setState({menuState: this.state.menuState === 'cardHolder' ? 'slideshow' : 'cardHolder'})
+
+  },
 
   getHeaderSize: function(props) {
 
@@ -37,19 +44,24 @@ var Work = React.createClass({
   },
     
   setCategory: function(category) {
-    var newWorkItems = this.state.workItems.sort(function(a,b) {
-        // console.log(a.type)
-      if (a.type === category) {
-        console.log(true)
-        return -1;
-      }
-      if (a.type !== category) {
-        return 1
-      }
-      return 0
-    });
+    if (this.state.menuState === 'cardHolder') {
+      var newWorkItems = this.state.workItems.sort(function(a,b) {
+          // console.log(a.type)
+        if (a.type === category) {
+          // console.log(true)
+          return -1;
+        }
+        if (a.type !== category) {
+          return 1
+        }
+        return 0
+      });
 
-    this.setState({workItems: newWorkItems});
+      this.setState({workItems: newWorkItems});
+    }
+    else {
+      console.log('slidehow must be open')
+    }
   },
 
   componentWillReceiveProps: function(nextProps) {
@@ -57,6 +69,10 @@ var Work = React.createClass({
     // console.log(this.getHeaderSize(nextProps))
     
     this.setState({headerSize: this.getHeaderSize(nextProps)})
+    // console.log(this.props)
+    if(nextProps.location.pathname === '/work/') {
+      this.setState({menuState: 'cardHolder'});
+    }
 
     // this.getHeaderSize(nextProps);
   },
@@ -70,7 +86,8 @@ var Work = React.createClass({
     var childrenWithProps = React.Children.map(this.props.children,
       (child) => React.cloneElement(child, {
          workItems: this.state.workItems,
-         activeSlide: this.state.activeSlide
+         toggleMenuState: this.toggleMenuState
+         // activeSlide: this.state.activeSlide
        }))
 
     

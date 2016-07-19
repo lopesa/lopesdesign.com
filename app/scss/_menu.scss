@@ -48,12 +48,20 @@
 			&:hover {
 				background-color: $yellow-orange;
 			}
+
+			&.active {
+				background-color: $yellow-orange;
+			}
 		}
 
 		&:nth-child(3) {
 			background-color: $lime-crazy-50;
 
-			&:hover {
+			&:hover{
+				background-color: $lime-crazy;
+			}
+
+			&.active {
 				background-color: $lime-crazy;
 			}
 		}

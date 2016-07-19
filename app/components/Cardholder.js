@@ -1,30 +1,91 @@
 var React = require('react');
 var Card = require('../components/Card')
 
-import { Link } from 'react-router'
+import TransitionGroup from 'react-addons-transition-group'
+
 
 
 var Cardholder = React.createClass({
 
-	render: function(){
+  getInitialState: function() {
+    return {
+      cardArray: []
+    }
+  },
 
-		// console.log(this.props)
+  componentDidMount: function() {
+    
+    var cardArray = this.buildCardArray();
+    var that = this;
 
-		var cardArray = [];
+    var internalAddCardToState = this.addCardToState
 
-  	for (var card in this.props.workItems) {
-  		  
-      cardArray.push(
+    cardArray.forEach(function(item){
+      setTimeout(internalAddCardToState.bind(that, item), 200 * item.key)
+    });
+    
+  },
+
+  componentWillReceiveProps: function() {
+    // console.log('it gets here')
+    this.setState({cardArray: []});
+    var cardArray = this.buildCardArray();
+    var that = this;
+
+    var internalAddCardToState = this.addCardToState
+
+    cardArray.forEach(function(item){
+      setTimeout(internalAddCardToState.bind(that, item), 200 * item.key)
+    });
+
+
+  },
+
+  addCardToState: function(card) {
+
+    var tempCardStack = this.state.cardArray;
+    
+    tempCardStack.push(card);
+    
+    this.setState({cardArray: tempCardStack});
+  },
+
+  buildCardArray: function() {
+
+    var internalCardArray = [];
+
+
+    var addCard = function() {
+
+      internalCardArray.push(
         <Card 
           content={this.props.workItems[card]} 
-         	key={card}
-          activeSlide={this.props.activeSlide} />
+          key={card}
+          activeSlide={this.props.activeSlide}
+          toggleMenuState={this.props.toggleMenuState} />
       )
-    }
+    };
 
-    return (
+    for (var card in this.props.workItems) {
+
+      addCard.call(this, card);
+        
+    };
+
+    return internalCardArray;
+
+  },
+
+
+
+
+	render: function(){
+
+		return (
 			<div className="cardholder">
-				{cardArray}
+        <TransitionGroup>
+  				{this.state.cardArray}
+        </TransitionGroup>
 			</div>
 		)
 

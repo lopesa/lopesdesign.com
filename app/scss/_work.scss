@@ -17,6 +17,9 @@
 		justify-content: space-between;
 		
 		width: 95%;
+
+		flex-grow: 0;
+		flex-shrink: 0;
 		
 		ul {
 			@include flexy(row)
