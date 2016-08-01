@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --content-base public/ --inline --history-api-fallback",
+    "prod": "NODE_ENV=production webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tony Lopes",
@@ -25,6 +26,7 @@
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015-webpack": "^6.4.2",
     "babel-preset-react": "^6.11.1",
     "breakpoint-sass": "^2.7.0",
     "css-loader": "^0.23.1",

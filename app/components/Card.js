@@ -19,7 +19,7 @@ var Card = React.createClass({
   componentDidMount: function(callback) {
     // console.log(this)
     const el = findDOMNode(this);
-    TweenMax.fromTo(el, 0.8, {opacity: 0}, {opacity: 1, onComplete: callback})
+    TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 1, onComplete: callback})
     // console.log(el)
     // callback;
   },

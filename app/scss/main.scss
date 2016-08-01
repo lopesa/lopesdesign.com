@@ -75,11 +75,13 @@ li {
 	a {
 		@include base-transition;
 
-		background-color: $red-orange-20;
+		// background-color: $red-orange-20;
+		background-color: $bright-sage-20;
 		color: $warm-grey;
 
 		&:hover {
-			background-color: $red-orange-50;
+			// background-color: $red-orange-50;
+			background-color: $white;
 		}
 	}
 }

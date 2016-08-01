@@ -17,7 +17,8 @@ var Slideshow = React.createClass({
 		}
 
 		else {
-			return this.props.params.slideName
+			return this.props.workItems[this.props.workItems.length-1].url
+			// return this.props.params.slideName
 		}
 
 	},
@@ -31,7 +32,8 @@ var Slideshow = React.createClass({
 		}
 
 		else {
-			return this.props.params.slideName
+			// return this.props.params.slideName
+			return this.props.workItems[0].url
 		}
 
 	},

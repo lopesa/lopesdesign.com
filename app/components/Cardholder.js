@@ -35,7 +35,7 @@ var Cardholder = React.createClass({
     var internalAddCardToState = this.addCardToState
 
     cardArray.forEach(function(item){
-      setTimeout(internalAddCardToState.bind(that, item), 200 * item.key)
+      setTimeout(internalAddCardToState.bind(that, item), 175 * item.key)
     });
 
 

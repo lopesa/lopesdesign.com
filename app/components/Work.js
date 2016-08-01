@@ -4,6 +4,8 @@ var Slideshow = require('../components/Slideshow');
 var Card = require('../components/Card')
 var Cardholder = require('../components/Cardholder')
 
+import { browserHistory } from 'react-router'
+
 
 var Work = React.createClass({
 	getInitialState: function() {
@@ -44,7 +46,7 @@ var Work = React.createClass({
   },
     
   setCategory: function(category) {
-    if (this.state.menuState === 'cardHolder') {
+    
       var newWorkItems = this.state.workItems.sort(function(a,b) {
           // console.log(a.type)
         if (a.type === category) {
@@ -58,9 +60,17 @@ var Work = React.createClass({
       });
 
       this.setState({workItems: newWorkItems});
-    }
-    else {
-      console.log('slidehow must be open')
+    
+    if (this.state.menuState === 'slideshow') {
+      // console.log('slidehow must be open')
+      var firstOfCategory = this.state.workItems.filter(function(item) {
+         return item.type === category
+        });
+
+
+      firstOfCategory = firstOfCategory[0];
+
+      browserHistory.push('/work/' + firstOfCategory.url);
     }
   },
 
