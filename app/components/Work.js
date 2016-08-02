@@ -57,11 +57,9 @@ var Work = React.createClass({
     
   setCategory: function(category) {
 
-    // console.log('setCategory')
+    if ((this.state.setCategoryInProgress === false) && (category !== this.state.category)) {
 
-    if (this.state.setCategoryInProgress === false) {
-
-      console.log('this much')
+      // console.log('this much')
 
       this.setState({
         setCategoryInProgress: true,
@@ -95,6 +93,9 @@ var Work = React.createClass({
         firstOfCategory = firstOfCategory[0];
 
         browserHistory.push('/work/' + firstOfCategory.url);
+
+
+        this.setSetMenuInProgress(false)
       }
     }
 
@@ -123,7 +124,7 @@ var Work = React.createClass({
       (child) => React.cloneElement(child, {
          workItems: this.state.workItems,
          toggleMenuState: this.toggleMenuState,
-         setCategoryInProgress: this.setCategoryInProgress,
+         setCategoryInProgress: this.state.setCategoryInProgress,
          setSetMenuInProgress: this.setSetMenuInProgress,
          category: this.state.category
         // activeSlide: this.state.activeSlide

@@ -16,7 +16,6 @@ var Cardholder = React.createClass({
 
   componentDidMount: function() {
 
-    // console.log('componentDidMount')
     
     var cardArray = this.buildCardArray();
     var that = this;
@@ -29,15 +28,12 @@ var Cardholder = React.createClass({
     
   },
 
-  // shouldComponentUpdate: function() {
-  //   console.log('shouldComponentUpdate');
-  // },
-
   componentWillReceiveProps: function(nextprops) {
 
 
 
-    if (nextprops.category !== this.state.category) {
+    // if (nextprops.category !== this.state.category) {
+    if (nextprops.setCategoryInProgress === true) {
 
       console.log('in cardholder: this.props.category !== this.state.category')
 
@@ -60,24 +56,7 @@ var Cardholder = React.createClass({
         category: nextprops.category
       });
     }
-
-      // callback;
-
-     
-
-    // console.log(this.props.workItems.length)
-
-
-
-    // this.props.defineSetCategoryActive(false);
-
-
   },
-
-  // componentWillAppear: function(didAppearCallback){
-  //     console.log('MyBox.componentWillAppear');
-  //     this.show(didAppearCallback);
-  // },
 
   addCardToState: function(card) {
 
@@ -88,11 +67,9 @@ var Cardholder = React.createClass({
     this.setState({cardArray: tempCardStack});
 
 
-    // console.log(this.state.cardArray.length)
 
     if (this.state.cardArray.length === this.props.workItems.length) {
       this.props.setSetMenuInProgress(false);
-      // console.log('here');
     }
 
   },
@@ -100,7 +77,6 @@ var Cardholder = React.createClass({
   buildCardArray: function() {
 
     var internalCardArray = [];
-
 
     var addCard = function() {
 
@@ -111,6 +87,7 @@ var Cardholder = React.createClass({
           activeSlide={this.props.activeSlide}
           toggleMenuState={this.props.toggleMenuState} />
       )
+
     };
 
     for (var card in this.props.workItems) {
