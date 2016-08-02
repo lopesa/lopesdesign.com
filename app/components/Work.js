@@ -21,7 +21,9 @@ var Work = React.createClass({
     return {
       workItems: workItemsWithUrls,
       headerSize: this.getHeaderSize(this.props),
-      menuState: 'cardHolder'
+      menuState: 'cardHolder',
+      setCategoryInProgress: false,
+      category: 'web'
     }
 	},
 
@@ -29,6 +31,12 @@ var Work = React.createClass({
     
     this.setState({menuState: this.state.menuState === 'cardHolder' ? 'slideshow' : 'cardHolder'})
 
+  },
+
+  setSetMenuInProgress: function(value) {
+    this.setState({
+      setCategoryInProgress: value
+    })
   },
 
   getHeaderSize: function(props) {
@@ -44,11 +52,24 @@ var Work = React.createClass({
       }
   
   },
+
+  
     
   setCategory: function(category) {
-    
+
+    // console.log('setCategory')
+
+    if (this.state.setCategoryInProgress === false) {
+
+      console.log('this much')
+
+      this.setState({
+        setCategoryInProgress: true,
+        category: category
+      });
+
       var newWorkItems = this.state.workItems.sort(function(a,b) {
-          // console.log(a.type)
+            // console.log(a.type)
         if (a.type === category) {
           // console.log(true)
           return -1;
@@ -59,19 +80,24 @@ var Work = React.createClass({
         return 0
       });
 
-      this.setState({workItems: newWorkItems});
+      this.setState({
+        workItems: newWorkItems
+        // setCategoryActive: false
+      });
     
-    if (this.state.menuState === 'slideshow') {
-      // console.log('slidehow must be open')
-      var firstOfCategory = this.state.workItems.filter(function(item) {
-         return item.type === category
-        });
+      if (this.state.menuState === 'slideshow') {
+        // console.log('slidehow must be open')
+        var firstOfCategory = this.state.workItems.filter(function(item) {
+           return item.type === category
+          });
 
 
-      firstOfCategory = firstOfCategory[0];
+        firstOfCategory = firstOfCategory[0];
 
-      browserHistory.push('/work/' + firstOfCategory.url);
+        browserHistory.push('/work/' + firstOfCategory.url);
+      }
     }
+
   },
 
   componentWillReceiveProps: function(nextProps) {
@@ -96,8 +122,11 @@ var Work = React.createClass({
     var childrenWithProps = React.Children.map(this.props.children,
       (child) => React.cloneElement(child, {
          workItems: this.state.workItems,
-         toggleMenuState: this.toggleMenuState
-         // activeSlide: this.state.activeSlide
+         toggleMenuState: this.toggleMenuState,
+         setCategoryInProgress: this.setCategoryInProgress,
+         setSetMenuInProgress: this.setSetMenuInProgress,
+         category: this.state.category
+        // activeSlide: this.state.activeSlide
        }))
 
     
@@ -110,9 +139,12 @@ var Work = React.createClass({
         		Work
         	</h2>
           <ul>
-            <li onClick={this.setCategory.bind(this, 'web')}>Web</li>
-            <li onClick={this.setCategory.bind(this, 'photo')}>Photography</li>
-            <li onClick={this.setCategory.bind(this, 'video')}>Video / Motion</li>
+            <li
+              onClick={this.setCategory.bind(this, 'web')}> Web</li>
+            <li 
+              onClick={this.setCategory.bind(this, 'photo')}>Photography</li>
+            <li
+              onClick={this.setCategory.bind(this, 'video')}>Video / Motion</li>
           </ul>
         </div>
         

@@ -24,6 +24,13 @@ var Card = React.createClass({
     // callback;
   },
 
+  // componentWillAppear: function(callback) {
+  	// console.log('componentWillAppear')
+  	// setTimeout(function() {
+  	// 	TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 1, onComplete: callback});
+  	// }, 150)
+  // },
+
 	
 
 	render: function(){

@@ -9,26 +9,15 @@ var Cardholder = React.createClass({
 
   getInitialState: function() {
     return {
-      cardArray: []
+      cardArray: [],
+      category: this.props.category
     }
   },
 
   componentDidMount: function() {
+
+    // console.log('componentDidMount')
     
-    var cardArray = this.buildCardArray();
-    var that = this;
-
-    var internalAddCardToState = this.addCardToState
-
-    cardArray.forEach(function(item){
-      setTimeout(internalAddCardToState.bind(that, item), 200 * item.key)
-    });
-    
-  },
-
-  componentWillReceiveProps: function() {
-    // console.log('it gets here')
-    this.setState({cardArray: []});
     var cardArray = this.buildCardArray();
     var that = this;
 
@@ -37,9 +26,58 @@ var Cardholder = React.createClass({
     cardArray.forEach(function(item){
       setTimeout(internalAddCardToState.bind(that, item), 175 * item.key)
     });
+    
+  },
+
+  // shouldComponentUpdate: function() {
+  //   console.log('shouldComponentUpdate');
+  // },
+
+  componentWillReceiveProps: function(nextprops) {
+
+
+
+    if (nextprops.category !== this.state.category) {
+
+      console.log('in cardholder: this.props.category !== this.state.category')
+
+      this.setState({
+        cardArray: [],
+      });
+
+      var cardArray = this.buildCardArray();
+      var that = this;
+
+      var internalAddCardToState = this.addCardToState
+
+      cardArray.forEach(function(item){
+        setTimeout(internalAddCardToState.bind(that, item), 175 * item.key)
+      });
+
+      this.show
+
+      this.setState({
+        category: nextprops.category
+      });
+    }
+
+      // callback;
+
+     
+
+    // console.log(this.props.workItems.length)
+
+
+
+    // this.props.defineSetCategoryActive(false);
 
 
   },
+
+  // componentWillAppear: function(didAppearCallback){
+  //     console.log('MyBox.componentWillAppear');
+  //     this.show(didAppearCallback);
+  // },
 
   addCardToState: function(card) {
 
@@ -48,6 +86,15 @@ var Cardholder = React.createClass({
     tempCardStack.push(card);
     
     this.setState({cardArray: tempCardStack});
+
+
+    // console.log(this.state.cardArray.length)
+
+    if (this.state.cardArray.length === this.props.workItems.length) {
+      this.props.setSetMenuInProgress(false);
+      // console.log('here');
+    }
+
   },
 
   buildCardArray: function() {
