@@ -2,6 +2,9 @@
 @import "typography";
 @import "breakpoints";
 
+@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+
 .home {
 	width: 100%;
 	height: 100vh;
@@ -16,8 +19,11 @@
 	align-items: flex-start;
 
 	h1 {
-		font-size: 6em;
+		font-size: 4em;
+		line-height: 1.3em;
+
 		color: $light-warm-grey;
+
 
 		margin: 0;
 
@@ -25,6 +31,7 @@
 
 		@include breakpoint($ipad) {
 			font-size: 8em;
+			line-height: initial;
 		}
 	}
 
@@ -37,27 +44,19 @@
 		background-color: $red-orange-80;
 	}
 	
-	// h1 {
-	// 	font-size: 8em;
-	// 	color: $light-warm-grey;
-
-	// 	margin: 0;
-
-	// 	@include freight-light;
-
-	// 	&:nth-child(1) {
-	// 		line-height: 1.4em;
-	// 	}
-	// }
-
 	.ampersand {
 		@include kepler;
-		font-size: 30em;
+		font-size: 29em;
 		color: $light-warm-grey;
 		opacity: 0.4;
 		position: absolute;
-		top: 152px;
 		left: -38px;
-		line-height: 1em;
+		line-height: 1.15em;
+
+		@include breakpoint($ipad) {
+			top: 152px;
+			font-size: 30em;
+			line-height: 0.85em;
+		}
 	}
 }

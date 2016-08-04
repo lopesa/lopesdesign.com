@@ -8,6 +8,8 @@
 	flex-grow: 0;
 	flex-shrink: 0;
 
+	padding-bottom: 150px;
+
 	span {
 
 		&:nth-child(1) {
@@ -20,30 +22,30 @@
 
 	}
 
-	.example-enter {
-	  opacity: 0.01;
-	  transition: opacity .5s ease-in;
-	}
+	// .example-enter {
+	//   opacity: 0.01;
+	//   transition: opacity .5s ease-in;
+	// }
 
-	.example-enter.example-enter-active {
-	  opacity: 1;
-	}
+	// .example-enter.example-enter-active {
+	//   opacity: 1;
+	// }
 
-	.example-leave {
-	  opacity: 1;
-	  transition: opacity .5s ease-in;
-	}
+	// .example-leave {
+	//   opacity: 1;
+	//   transition: opacity .5s ease-in;
+	// }
 
-	.example-leave.example-leave-active {
-	  opacity: 0;
-	}
+	// .example-leave.example-leave-active {
+	//   opacity: 0;
+	// }
 
-	.example-appear {
-	  opacity: 0.01;
-	}
+	// .example-appear {
+	//   opacity: 0.01;
+	// }
 
-	.example-appear.example-appear-active {
-	  opacity: 1;
-	  transition: opacity .5s ease-in;
-	}
+	// .example-appear.example-appear-active {
+	//   opacity: 1;
+	//   transition: opacity .5s ease-in;
+	// }
 }

@@ -31,6 +31,7 @@ var Menu = React.createClass({
 				<nav
 	        role="navigation"
 	        className={this.setMenuStyle()}>
+	        
 	        <ul>
 	          <Link to={"/"} activeClassName="active">
 	            <li>
@@ -53,9 +54,24 @@ var Menu = React.createClass({
 		          </li>
 		        </Link>
 	        </ul>
+	        
+	        <div className="outlinks">
+	        	<a href="https://www.flickr.com/photos/57613898@N08/">
+		        	<div className="flickr"></div>
+	        	</a>
+	        	<a href="https://twitter.com/weblope">
+		        	<div className="twitter"></div>
+		        </a>
+		        <a href="https://github.com/lopesa">
+		        	<div className="github"></div>
+		        </a>
+		        <a href="https://www.linkedin.com/in/tony-lopes-b51172">
+		        	<div className="linkedin"></div>
+		        </a>
+	        </div>
+
 	      </nav>
 	    </div>
-
 		)
 	}
 

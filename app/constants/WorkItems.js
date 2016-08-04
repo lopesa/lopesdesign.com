@@ -76,7 +76,7 @@ Built with Node.js and Express. These are on heroku on their sandbox servers, so
 		type: 'photo',
 		image: 'photography_sm.jpg',
 		title: 'My Photography',
-		copy: 'My life through a lens',
+		copy: 'Exploring life through a lens',
 		slide: {
 			image: 'photography.png',
 			longCopy: `I've been taking photos most of my life, so it's one of the mediums I've been with the longest and I love it because it's so accessible. And yet deceptively so. While it's fairly easy to get a good photo, it can be very challenging to get something that goes beyond that. (It can be magically simple too, but that's a different story.)

@@ -13,14 +13,26 @@
 
 	@include flexy(column);
 	
-	align-items: flex-start;
+	// align-items: flex-start;
 
-	justify-content: flex-start;
+	// justify-content: flex-start;
 	
+	// h2 {
+	// 	z-index: 1;
+	// 	position: fixed;
+	// 	margin-left: 20px;
+	// }
+
 	h2 {
-		z-index: 1;
-		position: fixed;
-		margin-left: 20px;
+		font-size: 3.5em;
+		margin-top: 15px;
+
+		width: 80%;
+		
+		@include breakpoint($ipad) {
+			margin-top: 0;
+			font-size: 6em;
+		}
 	}
 
 	.copy-holder {
@@ -35,25 +47,64 @@
 		opacity: 0.7;
 	}
 
-	.copy {
+	.copy, {
 		z-index: 4;
-		color: $white;
-		padding: 0 15px 0;
+		
+		padding: 10px 15px;
+
+		
+		@include breakpoint($ipad) {
+			padding: 50px 80px;
+			justify-content: center;
+		}
+
 		overflow-y: scroll;
 
+		@include flexy(column);
+		justify-content: flex-start;
+
+		
+		// align-items: flex-start;
+
+   	// font-size: 1.1em;
+		@include freight-light;
+
 		p {
+			color: $white;
+			// font-size: 1.4em;
 			&:nth-child(1) {
 				margin-top: 5px;
+			}
+		}
+
+		a {
+			@include base-transition;
+
+			// background-color: $red-orange-20;
+			// background-color: $bright-sage-50;
+			background-color: $blue-20;
+			color: $white;
+
+			padding: 0 5px;
+
+			&:hover {
+				// background-color: $red-orange-50;
+				background-color: $white;
+				color: $dark-blue;
 			}
 		}
 	}
 
 	.copy, .background {
 		width: 80%;
-		height: 60%;
+		height: 80%;
 		position: absolute;
-		top: 20%;
+		top: 16%;
 		left: 10%;
+
+		@include breakpoint($ipad) {
+			height: 60%;
+		}
 	}
 
 

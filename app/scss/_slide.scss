@@ -56,7 +56,11 @@
 
 	.copy {
 
-		width: 60%;
+		width: 75%;
+
+		@include breakpoint($ipad) {
+			width: 60%;
+		}
 
 	}
 

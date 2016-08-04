@@ -13,20 +13,58 @@
 	background-size: cover;
 
 	.work-header {
-		@include flexy(row);
-		justify-content: space-between;
+		@include flexy(column);
+		align-items: flex-start;
+
+		
 		
 		width: 95%;
 
 		flex-grow: 0;
 		flex-shrink: 0;
+
+		@include breakpoint($ipad) {
+			@include flexy(row);
+			justify-content: space-between;
+			top: initial;
+		}
+
+		h2 {
+			&.small {
+				font-size: 3.5em;
+				margin-top: 15px;
+			
+				@include breakpoint($ipad) {
+					margin-top: 0;
+				}
+			}
+			&.large {
+				font-size: 3.5em;
+				margin-top: 15px;
+				line-height: 1.4em;
+
+
+				@include breakpoint($ipad) {
+					font-size: 6em;
+					margin-top: 0;
+					// line-height: 1.4em;
+				}
+			}
+		}
 		
 		ul {
 			@include flexy(row)
-			@include freight-light;
-			font-size: 1.3em;
+			@include freight;
+			font-size: 1em;
 
 			color: $lime-crazy;
+
+			@include breakpoint($ipad) {
+				@include freight-light;
+				font-size: 1.3em;
+			}
+			padding: 0;
+			margin: 0;
 
 			li {
 				padding: 0 15px; 

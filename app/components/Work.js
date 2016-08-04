@@ -44,11 +44,13 @@ var Work = React.createClass({
       if (Object.keys(props.params).length === 1) {
         
         // console.log(Object.keys(props.params).length);
-        return {fontSize: "3.5em"}
+        // return {fontSize: "3.5em"}
+        return "small"
       }
 
       else {
-        return {fontSize: "6em"}
+        // return {fontSize: "6em"}
+        return "large"
       }
   
   },
@@ -136,7 +138,7 @@ var Work = React.createClass({
       <div className="work">
         
         <div className='work-header'>
-        	<h2 style={this.state.headerSize}>
+        	<h2 className={this.state.headerSize}>
         		Work
         	</h2>
           <ul>
