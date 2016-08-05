@@ -16,7 +16,7 @@
 		@include flexy(column);
 		align-items: flex-start;
 
-		
+		margin-bottom: 7px;
 		
 		width: 95%;
 
@@ -27,6 +27,7 @@
 			@include flexy(row);
 			justify-content: space-between;
 			top: initial;
+			height: 90px;
 		}
 
 		h2 {

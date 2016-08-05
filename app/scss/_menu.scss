@@ -107,7 +107,7 @@
 
 		width: 50%;
 
-		@include breakpoint($ipad) {
+		@include breakpoint($ipad-wide) {
 			top: 5%;
 			left: initial;
 			right: 30px;
@@ -132,7 +132,11 @@
 	&.category-menu {
 		@include flexy(row);
 		top: 0;
-		right: 10px;
+		right: 4px;
+
+		@include breakpoint($big-phone) {
+			right: 10px;
+		}
 
 		@include breakpoint($ipad) {
 			// top: 5%;

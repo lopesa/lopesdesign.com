@@ -10,12 +10,6 @@
 
 	overflow-y: scroll;
 
-	// background-color: $light-warm-grey-85;
-
-
-
-	// display: none;
-
 	@include flexy(column);
 	justify-content: flex-start;
 
@@ -24,7 +18,7 @@
 		color: $white;
 		font-size: 1em;
 		// width: 80%;
-		margin: 8px 0 0;
+		margin: 8px 0 10px 0;
 
 		background-color: $yellow-orange-80;
 		align-self: flex-start;
@@ -56,22 +50,36 @@
 
 	.copy {
 
-		width: 75%;
+		width: 92%;
+
+		@include breakpoint($big-phone) {
+			width: 85%;
+		}
 
 		@include breakpoint($ipad) {
 			width: 60%;
 		}
 
+		
+
 	}
 
-	iframe {
-		margin-bottom: 15px;
-	}
+	// iframe {
+	// 	margin-bottom: 15px;
+	// }
 
 	@include base-transition;
 
 	&.leave {
 		opacity: 0;
 
+	}
+
+	.facebookFlash {
+		display: none;
+	}
+
+	#playerSSKim {
+		margin-bottom: 20px;
 	}
 }

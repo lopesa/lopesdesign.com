@@ -64,7 +64,7 @@
 		justify-content: flex-start;
 
 		
-		// align-items: flex-start;
+		align-items: flex-start;
 
    	// font-size: 1.1em;
 		@include freight-light;
@@ -97,13 +97,14 @@
 
 	.copy, .background {
 		width: 80%;
-		height: 80%;
+		height: 84%;
 		position: absolute;
 		top: 16%;
 		left: 10%;
 
 		@include breakpoint($ipad) {
 			height: 60%;
+			top: 20%;
 		}
 	}
 

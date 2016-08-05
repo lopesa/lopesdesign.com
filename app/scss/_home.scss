@@ -9,6 +9,14 @@
 	width: 100%;
 	height: 100vh;
 
+	.typebreaker {
+		width: 50%;
+
+		@include breakpoint($ipad-wide) {
+			width: 100%;
+		}
+	}
+
 	background-image: url('/img/culebrita.jpg');
 	background-size: cover;
 
@@ -19,8 +27,8 @@
 	align-items: flex-start;
 
 	h1 {
-		font-size: 4em;
-		line-height: 1.3em;
+		font-size: 3.7em;
+		line-height: 1.2em;
 
 		color: $light-warm-grey;
 
@@ -29,7 +37,22 @@
 
 		@include freight-light;
 
+		@include breakpoint($big-phone) {
+			font-size: 3.85em;
+			line-height: 1.25em;
+		}
+
+		@include breakpoint($iphone6plusCatcher) {
+			font-size: 4.6em;
+			line-height: 1.3em;
+		}
+
 		@include breakpoint($ipad) {
+			font-size: 8.3em;
+			line-height: 1.1;
+		}
+
+		@include breakpoint($ipad-wide) {
 			font-size: 8em;
 			line-height: initial;
 		}
@@ -46,14 +69,30 @@
 	
 	.ampersand {
 		@include kepler;
-		font-size: 29em;
+		font-size: 25em;
 		color: $light-warm-grey;
 		opacity: 0.4;
 		position: absolute;
 		left: -38px;
 		line-height: 1.15em;
 
+		@include breakpoint($big-phone) {
+			font-size: 29em;
+		}
+
+		@include breakpoint($iphone6plusCatcher) {
+			font-size: 34em;
+		}
+
+
 		@include breakpoint($ipad) {
+			top: 118px;
+			font-size: 51em;
+			line-height: 0.85em;
+		}
+
+
+		@include breakpoint($ipad-wide) {
 			top: 152px;
 			font-size: 30em;
 			line-height: 0.85em;

@@ -5,7 +5,7 @@ var Photo = React.createClass({
     return(
       <div className="about">
       	<h2>
-      		about
+      		About
       	</h2>
       	<div className="copy-holder">
       		<div className="background"></div>
@@ -19,7 +19,7 @@ var Photo = React.createClass({
 		      	</p>
 
 						<p>
-							Speaking of, I am always looking for a good one. Please give me a shout if you think we might work well together. <a href="mailto:tony@lopesdesign.com">tony@lopesdesign.com</a>
+							Speaking of, I am always looking for a fun project. Please give me a shout if you think we might work well together. <a href="mailto:tony@lopesdesign.com">tony@lopesdesign.com</a>
 						</p>
 		      </div>
 		    </div>

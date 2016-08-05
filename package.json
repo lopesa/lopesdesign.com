@@ -19,7 +19,8 @@
     "react-addons-transition-group": "^15.2.1",
     "react-dom": "^15.2.0",
     "react-redirect": "^1.0.0",
-    "react-router": "^2.5.2"
+    "react-router": "^2.5.2",
+    "youtube-iframe": "^1.0.3"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",

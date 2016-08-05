@@ -16,8 +16,11 @@
 			width: 100%;
 			heigth: 100%;
 			@include flexy(row);
-			justify-content: flex-start;
 			flex-wrap: wrap;
+
+			@include breakpoint($ipad) {
+				justify-content: flex-start;
+			}
 		}
 
 	}

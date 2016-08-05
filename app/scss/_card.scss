@@ -18,10 +18,12 @@
 	background-color: $white-70;
 	color: $warm-grey;
 
-	width: 100%;
+	width: 90%;
+	padding: 0 10px;
 
 	@include breakpoint($ipad) {
 		width: 31%;
+		padding: 10px;
 	}
 
 	@include breakpoint($ipad-wide) {
@@ -30,7 +32,7 @@
 
 	margin: 0 1% 15px 1%;
 
-	padding: 10px;
+	
 
 	.header {
 		@include flexy(row);
@@ -52,8 +54,20 @@
 
 	.image {
 		width: 100%;
-		height: 140px;
+		height: 150px;
 		background-size: 100% auto;
+
+		@include breakpoint($big-phone) {
+			height: 170px;
+		}
+		
+		@include breakpoint($iphone6plusCatcher) {
+			height: 200px;
+		}
+
+		@include breakpoint($ipad) {
+			height: 140px;
+		}
 	}
 
 	.copy {

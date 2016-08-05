@@ -105,20 +105,24 @@ Of course it wasn't limited to only the capturing of the photos but to the whole
 		title: 'Motion and Animation',
 		copy: 'Just plain fun!',
 		slide: {
-		longCopy: `<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="520" height="540" id="facebook_top5_MAY_F_WITHLOADER" align="middle">
+		longCopy: `<object class="facebookFlash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="520" height="540" id="facebook_top5_MAY_F_WITHLOADER" align="middle">
 <param name="allowScriptAccess" value="sameDomain" />
 <param name="allowFullScreen" value="false" />
 <param name="movie" value="facebook_top5_MAY_F_WITHLOADER.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" />	<embed src="../img/facebook_top5_MAY_F_WITHLOADER.swf" quality="high" bgcolor="#ffffff" width="520" height="540" name="facebook_top5_MAY_F_WITHLOADER" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
 </object>
 
-This is a collaboration with another Graphic Artist, I did the animations. These lived on facebook and were meant to highlight some fun stuff happening each month at Old Navy. It was kind of a random project that didn't last too long but it was really fun to do. I got to put all my studies of the particle generator in After Effects to use to make the BBQ smoke and explode.
+<div class="facebookFlash">This is a collaboration with another Graphic Artist, I did the animations. These lived on facebook and were meant to highlight some fun stuff happening each month at Old Navy. It was kind of a random project that didn't last too long but it was really fun to do. I got to put all my studies of the particle generator in After Effects to use to make the BBQ smoke and explode.</div>
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GXYYGAYln-w" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/GXYYGAYln-w" frameborder="0" allowfullscreen></iframe> -->
+
+<div id="playerIntroOutro"></div>
 
 The intro and outros for Old Navy Studio Spotlight videos.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/K4rPWKc46oM" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/K4rPWKc46oM" frameborder="0" allowfullscreen></iframe> -->
+
+<div id="playerClothingAnim"></div>
 
 More Studio Spotlight animation. Clothing stop-motion.`,
 			// longCopy: `<p>some p</p>`,
@@ -131,11 +135,15 @@ More Studio Spotlight animation. Clothing stop-motion.`,
 		title: 'Short Videos',
 		copy: 'Putting it all together',
 		slide: {
-			longCopy: `<iframe width="560" height="315" src="https://www.youtube.com/embed/Y5zMdyJ5lLQ" frameborder="0" allowfullscreen></iframe> 
+			longCopy: `<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5zMdyJ5lLQ" frameborder="0" allowfullscreen></iframe> -->
+
+<div id="playerSSSarah"></div> 
 
 These videos are for social media and were for supporting an Old Navy initiative called Studio Spotlight that was an internal designer's personal line produced for select stores by ON. So we made videos to introduce the designers. These are a couple of my favorites, we made four total.  
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/G-j2Gycr9WY" frameborder="0" allowfullscreen></iframe>`,
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/G-j2Gycr9WY" frameborder="0" allowfullscreen></iframe> -->
+
+<div id="playerSSKim"></div> `,
 			linkOut: 'linkOut'
 		}
 	}
