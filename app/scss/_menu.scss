@@ -131,6 +131,7 @@
 
 	&.category-menu {
 		@include flexy(row);
+		justify-content: space-between;
 		top: 0;
 		right: 4px;
 
@@ -150,7 +151,10 @@
 		ul {
 			@include flexy(row);
 
-			order: 2
+			order: 2;
+
+			// width: 50%;
+			width: initial;
 		}
 
 		li {
@@ -165,6 +169,9 @@
 			a {
 				margin: 0 2px;
 			}
+
+			// width: 50%;
+			width: initial;
 
 			.flickr, .twitter, .github, .linkedin {
 				width: 20px;

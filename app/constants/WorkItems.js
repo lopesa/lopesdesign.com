@@ -43,7 +43,6 @@ Here are embeds or links to most of the projects I've made so far:
 #### [Algorithms](https://github.com/lopesa/freecodecamp-projects/blob/master/algorithms.js)
 
 #### Front End Projects  
-Calculator 
 
 "Pomodoro Clock", to make sure you don't take too many facebook breaks. I also think it works in the other direction too, so you don't get absorbed in a challenge and forget to stretch your shoulders for 6 hours. So anyway, it's a work-break timer thing. I worked on a UI that reflected that we are looking at the *relationship* between work periods and break periods 
 
@@ -81,7 +80,9 @@ Built with Node.js and Express. These are on heroku on their sandbox servers, so
 			image: 'photography.png',
 			longCopy: `I've been taking photos most of my life, so it's one of the mediums I've been with the longest and I love it because it's so accessible. And yet deceptively so. While it's fairly easy to get a good photo, it can be very challenging to get something that goes beyond that. (It can be magically simple too, but that's a different story.)
 
-At the moment I find myself taking shots of travel, nature, food, things at macro level and sometimes when I'm really feeling transcendent, abstract shots and textural things.`,
+At the moment I find myself taking shots of travel, nature, food, things at macro level and sometimes when I'm really feeling transcendent, abstract shots and textural things.
+
+I have many of my last 5 years of photos up on flickr. I hope you'll [have a look](https://www.flickr.com/photos/57613898@N08/)!`,
 			linkOut: 'https://www.flickr.com/photos/57613898@N08/'
 		}
 	},

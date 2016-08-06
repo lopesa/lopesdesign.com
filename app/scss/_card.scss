@@ -21,10 +21,15 @@
 	width: 90%;
 	padding: 0 10px;
 
+	@include breakpoint($phone-ipad) {
+		width: 48%;
+		padding: 10px;
+	}
+
 	@include breakpoint($ipad) {
 		width: 31%;
 		padding: 10px;
-	}
+	}	
 
 	@include breakpoint($ipad-wide) {
 		width: 23%;

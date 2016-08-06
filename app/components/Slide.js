@@ -64,9 +64,14 @@ var Slide = React.createClass({
 	    	vidHeight = 158;
 	    }
 
-	    else if (window.innerWidth >= 400 && window.innerWidth < 768) {
+	    else if (window.innerWidth >= 400 && window.innerWidth < 767) {
 	    	vidWidth = 320;
 	    	vidHeight = 180;
+	    }
+
+	    else if (window.innerWidth >= 767 && window.innerWidth < 1023) {
+	    	vidWidth = 420;
+	    	vidHeight = 236;
 	    }
 
 

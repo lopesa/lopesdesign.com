@@ -6,8 +6,13 @@
 	width: 100%;
 	height: 100vh;
 
-	background-image: url('/img/marrakesh.jpg');
+	background-image: url('/img/marrakesh_sm.jpg');
 	background-size: cover;
+
+	
+	@include breakpoint($ipad) {
+		background-image: url('/img/marrakesh.jpg');
+	}
 
 
 

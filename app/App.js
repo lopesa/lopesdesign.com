@@ -4,7 +4,9 @@ var React = require('react');
 import { render } from 'react-dom';
 
 import routes from './config/routes'
-// 
+
+
+
 // var routes = require('./config/routes');
 
 import { Router, browserHistory } from 'react-router'

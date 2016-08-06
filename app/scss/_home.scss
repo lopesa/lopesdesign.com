@@ -17,7 +17,12 @@
 		}
 	}
 
-	background-image: url('/img/culebrita.jpg');
+	background-image: url('/img/culebrita_sm.jpg');
+
+	@include breakpoint($ipad) {
+		background-image: url('/img/culebrita.jpg');
+	}
+
 	background-size: cover;
 
 	overflow: hidden;
@@ -48,8 +53,8 @@
 		}
 
 		@include breakpoint($ipad) {
-			font-size: 8.3em;
-			line-height: 1.1;
+			font-size: 8.1em;
+			line-height: 1.05;
 		}
 
 		@include breakpoint($ipad-wide) {
