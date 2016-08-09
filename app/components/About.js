@@ -1,6 +1,19 @@
 var React = require('react');
 
 var Photo = React.createClass({
+
+	is_touch_device: function() {
+	  return 'ontouchstart' in window        // works on most browsers 
+	      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
+	},
+
+	divStyle: function() {
+		// console.log()
+		if (this.is_touch_device()) {
+			return {width: '100%'}
+		}
+	},
+
   render: function(){
     return(
       <div className="about">
@@ -9,8 +22,8 @@ var Photo = React.createClass({
       	</h2>
       	<div className="copy-holder">
       		<div className='inner-container'>
-	      		<div className="background"></div>
-		      	<div className="copy">
+	      		<div className="background" style={this.divStyle()}></div>
+		      	<div className="copy" style={this.divStyle()}>
 			      	<p>
 			      		Hi, I'm Tony Lopes and I'm a Graphic Designer and Web Developer living in San Francisco, California. I love to make an experience that tells a story or conveys a feeling, and impacts the viewer or user on multiple levels. I think both design and technology are best when they're mostly transparent in supporting that, both adding their quiet cues of style and competency.
 			      	</p>
