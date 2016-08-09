@@ -42,8 +42,55 @@
 
 	.copy-holder {
 		@include flexy(column);
-		height: 100vh;
+		// height: 100vh;
+		// width: 100%;
+		width: 90%;
+		flex-grow: 1;
+		margin-bottom: 5%;
+
+		@include breakpoint($big-phone) {
+			width: 80%;
+		}
+
+		// margin-left: -1%;
+
+
+
+		position: relative;
+
+	}
+
+	.inner-container {
+		position: absolute;
+		left: 0;
+		top: 0;
+		// overflow-x: hidden;
+		// overflow-y: scroll;
+		overflow: hidden;
+
 		width: 100%;
+		height: 100%;
+	}
+
+	.copy, .background {
+		width: 106%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		@include breakpoint($iphone6plusCatcher) {
+			width: 105%;
+		}
+
+		@include breakpoint($phone-ipad) {
+			width: 104%;
+		}
+
+		// @include breakpoint($ipad) {
+		// 	height: 60%;
+		// 	// top: 20%;
+		// }
 	}
 
 	.background {
@@ -57,19 +104,31 @@
 		
 		padding: 10px 15px;
 
+		@include breakpoint($iphone6plusCatcher) {
+			padding: 15px 30px;
+		}
+
+		@include breakpoint($phone-ipad) {
+			padding: 20px 35px;
+		}
+
 		
 		@include breakpoint($ipad) {
-			padding: 50px 80px;
-			justify-content: center;
+			padding: 30px 50px;
+			// justify-content: center;
+		}
+
+		@include breakpoint($real-wide) {
+			padding: 35px 70px;
+			// justify-content: center;
 		}
 
 		overflow-y: scroll;
 
-		@include flexy(column);
-		justify-content: flex-start;
 
-		
-		align-items: flex-start;
+		// @include flexy(column);
+		// justify-content: flex-start;
+		// align-items: flex-start;
 
    	// font-size: 1.1em;
 		@include freight-light;
@@ -97,19 +156,6 @@
 				background-color: $white;
 				color: $dark-blue;
 			}
-		}
-	}
-
-	.copy, .background {
-		width: 80%;
-		height: 84%;
-		position: absolute;
-		top: 16%;
-		left: 10%;
-
-		@include breakpoint($ipad) {
-			height: 60%;
-			top: 20%;
 		}
 	}
 
