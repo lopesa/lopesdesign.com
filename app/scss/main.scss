@@ -23,8 +23,13 @@
 // 	visibility: hidden;
 // }
 
-.wf-loading .ampersand, .wf-loading .name, .wf-loading .underline, .wf-loading h1, .wf-loading menu ul  {
+.wf-loading .ampersand, .wf-loading .name, .wf-loading .underline, .wf-loading h1, .wf-loading menu ul, .wf-loading h2,.wf-loading p  {
 	visibility: hidden;
+}
+
+
+::-webkit-scrollbar {
+	display: none;
 }
 
 

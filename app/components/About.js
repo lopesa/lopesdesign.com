@@ -8,7 +8,8 @@ var Photo = React.createClass({
 	},
 
 	divStyle: function() {
-		// console.log()
+		console.log(this.is_touch_device())
+		console.log(window.innerWidth)
 		if (this.is_touch_device()) {
 			return {width: '100%'}
 		}

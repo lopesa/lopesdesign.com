@@ -4,26 +4,23 @@
 
 .slideshow {
 	width: 100%;
-	height:96vh;
+	height: calc(100% - 90px);
 
+	overflow: hidden;
+	
 	@include flexy(row)
-	// justify-content: space-between;
-
-	// margin: 2vh 2%;
-
+	// justify-content: flex-start;
+	flex: 1 1 auto;
+	
 	.slide-holder {
 		background-color: $light-warm-grey-85;
 
 		width: 95%;
 		height: 100%;
+
 	}
 
 	
-
-	// background-color: $light-warm-grey-85;
-
-	// position: absolute;
-	// z-index: 5;
 
 	.button {
 		height: 100%;
