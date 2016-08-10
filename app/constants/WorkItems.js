@@ -9,7 +9,7 @@ var WorkItems = [
 			image: 'teamtedtile.png',
 			longCopy: `A complete design and development project. Team Ted Tile is a Bay Area tilesetting business who needed a website to show off their amazing work. I really just wanted to get the photos front and center asap. So then the most important thing technically was to make sure the loading time was as small as possible and managed throughout. After all, it being such an image heavy site, it has the potential to be a loader curmudgeon. So I really explored techniques to get image loading in the background.
 
-I also spent time on the slideshow on this project. Slideshows tend to live somewhere in most projects I do, so over time I've been zeroing in on my perfect implementation of one. (I tend to avoid plug-ins in favor of diy, except when I don't). Anyway this one turned out really well. I got it most of the way there and then ended up following a tutorial by a squarespace guy for the sweet mobile slide action.
+I also spent time on the slideshow on this project. Slideshows tend to live somewhere in most projects I do, so over time I've been zeroing in on my perfect implementation of one. (I like to avoid plug-ins in favor of diy, except when I don't). Anyway this one turned out really well. I got it most of the way there and then ended up following a tutorial by a squarespace guy for the sweet mobile slide action.
 
 Finally, this site is also built in a truly progressively enhanced way. Go ahead, turn off javascript, it'll still work fine! It just uses a bunch of, you know, going back and forth to the server, old school style. It's built using simple technologies, other than the html5 languages themselves, just jQuery really.`,
 			linkOut: 'http://teamtedtile.com'
