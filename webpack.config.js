@@ -1,4 +1,5 @@
 var path = require("path");
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: "./app/App.js",
@@ -26,5 +27,8 @@ module.exports = {
         loader: 'file-loader'
       }
     ]
+  },
+  postcss: function () {
+    return [autoprefixer];
   }
 }

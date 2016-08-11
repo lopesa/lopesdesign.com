@@ -7,13 +7,11 @@ var About = require('../components/About');
 var Blog = require('../components/Blog');
 var Cardholder = require('../components/Cardholder');
 var Slideshow = require('../components/Slideshow');
+var FourOfour = require('../components/404')
 
-// var Router = require('react-router');
-// var Route = Router.Route;
-// var Redirect = Router.Redirect;
-// var IndexRoute = Router.IndexRoute;
 
 import { Router, Route, Redirect, IndexRoute, Link } from 'react-router'
+
 
 module.exports = (
 	<Router>
@@ -29,6 +27,8 @@ module.exports = (
 	  	<Route path="about" component={About} />
 	  	
 	  	<Route path="blog" component={Blog} />
+
+	  	<Route path="*" component={FourOfour} />
 	  
 	  </Route>
 	 </Router>

@@ -1,0 +1,14 @@
+.four-o-four {
+	width: 100%;
+	height: 100vh;
+
+	background-image: url('/img/404.jpg');
+	background-size: contain;
+	background-position: 50%;
+
+	@include flexy(column);
+
+	h1 {
+		color: $white;
+	}
+}

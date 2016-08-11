@@ -109,7 +109,8 @@
 
 		@include breakpoint($ipad-wide) {
 			top: 5%;
-			left: initial;
+			// left: initial;
+			left: auto;
 			right: 30px;
 			width: 23%;
 		}

@@ -1,6 +1,6 @@
 var React = require('react');
 
-var Photo = React.createClass({
+var About = React.createClass({
 
 	is_touch_device: function() {
 	  return 'ontouchstart' in window        // works on most browsers 
@@ -52,4 +52,4 @@ var Photo = React.createClass({
   }
 })
 
-module.exports = Photo;
+module.exports = About;
