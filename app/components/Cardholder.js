@@ -13,6 +13,7 @@ var Cardholder = React.createClass({
       category: this.props.category
     }
   },
+  
 
   componentDidMount: function() {
 
