@@ -18,6 +18,33 @@
 		width: 95%;
 		height: 100%;
 
+		position: relative;
+
+		.close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 35px;
+			height: 20px;
+			background-color: $red-orange;
+			text-align: center;
+			line-height: 20px;
+			color: $white;
+			@include freight-medium;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $yellow-orange;
+			}
+		}
+
+	}
+
+	.slide-strip {
+		height: 100%;
+		background-color: $blue-20;
+		@include flexy(row);
+		justify-content: flex-start;
 	}
 
 	

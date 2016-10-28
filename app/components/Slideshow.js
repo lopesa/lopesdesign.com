@@ -1,5 +1,6 @@
 var React = require('react');
-var Slide = require('../components/Slide')
+// var Slide = require('../components/Slide')
+var SlideStrip = require('../components/SlideStrip')
 
 import { Link } from 'react-router'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
@@ -98,11 +99,72 @@ var Slideshow = React.createClass({
 		
 		this.setState(this.getStateFromUrl(nextprops));
 		// console.log(this.props)
+		Array.from(document.getElementsByClassName('slide')).forEach(item => {
+			console.log(item)
+			item.style.width = this.getSlideHolderWidth() / 2 + 'px';
+		})
 
   },
 
+  
+
+  // setSlideWidth: function() {
+		// // console.log(document.getElementsByClassName('slide-holder')[0].offsetWidth);
+  // 	return {
+  // 		width: document.getElementsByClassName('slide-holder')[0].offsetWidth
+  // 	}
+  // },
+
+  // setSlideWidth: function() {
+  // 	return document.getElementsByClassName('slide-holder')[0].offsetWidth;
+  // },
+
+  componentDidMount: function() {
+		
+		// set the width of the slides
+		Array.from(document.querySelectorAll('.slide')).forEach(item => {
+			item.style.width = document.getElementsByClassName('slide-holder')[0].offsetWidth + 'px';
+		});
+
+		// this.setSlide();
+
+		// console.log('Slideshow this.state: ', this.state)
+	},
+
+	setSlide: function setSlide(slide) {
+		// console.log('setslide')
+
+		// console.log(document.querySelectorAll('.slide-strip')[0])
+		
+		// document.querySelectorAll('.slide-strip')[0].style.transform= 'translate3d(-150px,0,0)';
+		
+		// document.querySelectorAll('.slide-strip')[0].style.backgroundColor = 'blue';
+			// .addClass('animate')
+			// .css('transform', 'translate3d(-' + slide * _getSlideWidth() + 'px,0,0)');
+    
+    // $("#slideshow img")
+    // 	.addClass('animate')
+    // 	.css('transform', 'translate3d(-' + 100 - slide * 50 + 'px,0,0)');
+	},
+
+
+
+ //  innerSlideHolderStyle: {
+	//   // width: this.props.workItems.length
+	// },
+
+	// const divStyle = {
+	//   color: 'blue',
+	//   backgroundImage: 'url(' + imgUrl + ')',
+	// };
+
 
 	render: function(){
+
+		// console.log('state: ', this.state);
+		// console.log('props: ', this.props.workItems.length);
+
+
 
 
 		// http://unitstep.net/blog/2015/03/03/using-react-animations-to-transition-between-ui-states/
@@ -119,17 +181,32 @@ var Slideshow = React.createClass({
 					<div className='buttonIcon'>&lt;</div>
 				</Link>
 
+				
 				<div className="slide-holder">
 
-					 <ReactCSSTransitionGroup
+					<Link to={'/work'} className='close'>&times;</Link>
+
+					<SlideStrip slides={this.props.workItems} currentSlide={this.state.thisIndex}/>
+
+					{/*
+
+					<div className="slide-strip" style={this.setInnerSlideHolderStyle()}>
+
+					<ReactCSSTransitionGroup
 				      transitionName="example"
 				      transitionEnterTimeout={0}
 				      transitionLeaveTimeout={0}
 				    >
+				  	{this.props.workItems.map((item, i) => {
+				  		return <Slide key={i} content={item} />
+				  	})}
 
 			   		<Slide key={this.state.thisSlide.url} content={this.state.thisSlide} />
 
-		   		</ReactCSSTransitionGroup>
+		   		</ReactCSSTransitionGroup> 
+		   		</div>
+
+		   		*/}
 
 		   	</div>
 

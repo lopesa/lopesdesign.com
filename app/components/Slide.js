@@ -31,10 +31,22 @@ var Slide = React.createClass({
 	},
 
 	componentDidMount: function() {
+		// console.log(this);
+
+		// this.setSlideWidth()
+		// console.log(this.getSlideHolderWidth())
+		// console.log(document.getElementsByClassName('slide'));
+		// document.getElementsByClassName('slide')[0].style.width = this.getSlideHolderWidth() / 2 + 'px';
+		
+
+		// Array.from(document.getElementsByClassName('slide')).forEach(item => {
+		// 	console.log(item)
+		// 	item.style.width = this.getSlideHolderWidth() / 2 + 'px';
+		// })
 
 		// if (this.props.content.type === 'video') {
 
-			console.log('componentDidMount');
+			// console.log('componentDidMount');
 
 			// const script = document.createElement("script");
 			// script.src = "https://www.youtube.com/iframe_api";
@@ -141,6 +153,12 @@ var Slide = React.createClass({
     // tag.src = "https://www.youtube.com/iframe_api";
 	},
 
+	// setSlideWidth: function() {
+	// 	// console.log(document.getElementsByClassName('slide-holder'));
+	// 	console.log(this);
+ //  	// return document.getElementsByClassName('slide-holder')[0].offsetWidth;
+ //  },
+
 
 	// componentDidUpdate: function() {
 	// 	getSizedYoutubeVideos();
@@ -164,6 +182,8 @@ var Slide = React.createClass({
 	render: function(){
 
 		return(
+			// <div className='slide' style={this.getSlideHolderWidth()}>
+			// <div className='slide' style={this.setSlideWidth()}>
 			<div className='slide'>
 	      <p className='title'>
         	{this.props.content.title}

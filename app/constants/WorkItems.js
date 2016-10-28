@@ -15,6 +15,19 @@ Finally, this site is also built in a truly progressively enhanced way. Go ahead
 			linkOut: 'http://teamtedtile.com'
 		}
 	},
+	// Alfredo
+	{
+		type: 'web',
+		image: 'alfredocaceres_sm.jpg',
+		// title: `Alfredo C${&aacute;}ceres`,
+		title: `Alfredo C${String.fromCharCode(225)}ceres`,
+		copy: 'Design and development',
+		slide: {
+			image: 'alfredocaceres.png',
+			longCopy: `Here's Alfredo's text. Write it.`,
+			linkOut: 'http://alfredocaceres.com'
+		}
+	},
 	// Virgin America
 	{
 		type: 'web',
