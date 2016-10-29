@@ -82,7 +82,8 @@ var Slideshow = React.createClass({
 	},
 
 	getInitialState: function() {
-
+		// let initialState = Object.assign(this.getStateFromUrl(this.props), {slideholderWidth: document.getElementsByClassName('slide-holder')[0].offsetWidth})
+		// console.log(initialState)
 		return this.getStateFromUrl(this.props);
 
 	},
@@ -99,36 +100,38 @@ var Slideshow = React.createClass({
 		
 		this.setState(this.getStateFromUrl(nextprops));
 		// console.log(this.props)
-		Array.from(document.getElementsByClassName('slide')).forEach(item => {
-			console.log(item)
-			item.style.width = this.getSlideHolderWidth() / 2 + 'px';
-		})
+		// Array.from(document.getElementsByClassName('slide')).forEach(item => {
+		// 	console.log(item)
+		// 	item.style.width = this.getSlideHolderWidth() / 2 + 'px';
+		// })
 
   },
 
   
 
-  // setSlideWidth: function() {
-		// // console.log(document.getElementsByClassName('slide-holder')[0].offsetWidth);
-  // 	return {
-  // 		width: document.getElementsByClassName('slide-holder')[0].offsetWidth
-  // 	}
-  // },
+  setSlideWidth: function() {
+  	
+  	Array.from(document.querySelectorAll('.slide')).forEach(item => {
+			item.style.width = document.getElementsByClassName('slide-holder')[0].offsetWidth + 'px';
+		});
+  },
 
   // setSlideWidth: function() {
   // 	return document.getElementsByClassName('slide-holder')[0].offsetWidth;
   // },
 
+  // conmponentWillMount: function() {
+  	// console.log(document.getElementsByClassName('slide-holder')[0].offsetWidth)
+  // 	this.setState(function() {
+		// 	return {slideholderWidth: document.getElementsByClassName('slide-holder')[0].offsetWidth}
+		// });
+
+		// this.setState({cats: 'dogs'})
+  // },
+
   componentDidMount: function() {
-		
-		// set the width of the slides
-		Array.from(document.querySelectorAll('.slide')).forEach(item => {
-			item.style.width = document.getElementsByClassName('slide-holder')[0].offsetWidth + 'px';
-		});
 
-		// this.setSlide();
-
-		// console.log('Slideshow this.state: ', this.state)
+  	this.setSlideWidth();
 	},
 
 	setSlide: function setSlide(slide) {
@@ -186,9 +189,12 @@ var Slideshow = React.createClass({
 
 					<Link to={'/work'} className='close'>&times;</Link>
 
-					<SlideStrip slides={this.props.workItems} currentSlide={this.state.thisIndex}/>
+					<SlideStrip slides={this.props.workItems}
+						currentSlide={this.state.thisIndex}/>
+					
+					{/*	slideholderWidth={this.state.slideholderWidth}/>
 
-					{/*
+					
 
 					<div className="slide-strip" style={this.setInnerSlideHolderStyle()}>
 

@@ -19,6 +19,7 @@
 		height: 100%;
 
 		position: relative;
+		overflow: hidden;
 
 		.close {
 			position: absolute;
@@ -32,6 +33,7 @@
 			color: $white;
 			@include freight-medium;
 			cursor: pointer;
+			z-index: 5;
 
 			&:hover {
 				background-color: $yellow-orange;
@@ -42,9 +44,9 @@
 
 	.slide-strip {
 		height: 100%;
-		background-color: $blue-20;
 		@include flexy(row);
 		justify-content: flex-start;
+		transition: transform 0.3s ease-out;
 	}
 
 	
@@ -110,21 +112,21 @@
 
 	
 
-	.example-enter {
-	  opacity: 0.01;
-	  transition: opacity .5s ease-in;
-	}
+	// .example-enter {
+	//   opacity: 0.01;
+	//   transition: opacity .5s ease-in;
+	// }
 
-	.example-enter.example-enter-active {
-	  opacity: 1;
-	}
+	// .example-enter.example-enter-active {
+	//   opacity: 1;
+	// }
 
-	.example-leave {
-	  opacity: 1;
-	  transition: opacity .5s ease-in;
-	}
+	// .example-leave {
+	//   opacity: 1;
+	//   transition: opacity .5s ease-in;
+	// }
 
-	.example-leave.example-leave-active {
-	  opacity: 0;
-	}
+	// .example-leave.example-leave-active {
+	//   opacity: 0;
+	// }
 }
