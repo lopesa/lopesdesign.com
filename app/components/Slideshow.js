@@ -132,6 +132,8 @@ var Slideshow = React.createClass({
   componentDidMount: function() {
 
   	this.setSlideWidth();
+
+
 	},
 
 	setSlide: function setSlide(slide) {
@@ -149,6 +151,20 @@ var Slideshow = React.createClass({
     // 	.addClass('animate')
     // 	.css('transform', 'translate3d(-' + 100 - slide * 50 + 'px,0,0)');
 	},
+
+	// this techinique is deprecated. But I don't have the heart to redo it roght this moment
+	// https://github.com/ReactTraining/react-router/blob/master/upgrade-guides/v2.4.0.md
+	forwardSlide: function forwardSlide() {
+		// console.log(this.props.history)
+		this.props.history.push('/work/' + this.state.nextSlideUrl)
+		// console.log(this.state.nextSlideUrl)
+
+	},
+
+	backwardSlide: function backwardSlide() {
+		this.props.history.push('/work/' + this.state.previousSlideUrl)
+	},
+
 
 
 
@@ -190,7 +206,9 @@ var Slideshow = React.createClass({
 					<Link to={'/work'} className='close'>&times;</Link>
 
 					<SlideStrip slides={this.props.workItems}
-						currentSlide={this.state.thisIndex}/>
+						currentSlide={this.state.thisIndex}
+						forwardSlide={this.forwardSlide}
+						backwardSlide={this.backwardSlide}/>
 					
 					{/*	slideholderWidth={this.state.slideholderWidth}/>
 

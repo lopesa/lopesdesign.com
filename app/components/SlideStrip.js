@@ -1,15 +1,13 @@
 var React = require('react');
 var Slide = require('../components/Slide')
 
+
 var SlideStrip = React.createClass({
 
 	componentDidMount: function() {
+
 		this.setSlide(this.props.currentSlide);
-
-		this._addTouchEvents(this.slideStripRef);
-
-		// console.log(this.slideStripRef);
-		// document.querySelectorAll('.slide-strip')[0].addEventListener("touchstart", this.bindUIEvents().onTouchStart(), false);
+		this._addTouchEvents(this.slideStripRef, this);
 	},
 
 	setWidth: function() {
@@ -18,33 +16,19 @@ var SlideStrip = React.createClass({
 
   getSlideWidth: function() {
   	return document.getElementsByClassName('slide-holder')[0].offsetWidth
+	},
 
-  	// let innerGetWidth = () => {
-	  // 	if (document.getElementsByClassName('slide-holder').length === 1) {
-	  // 		return document.getElementsByClassName('slide-holder')[0].offsetWidth
-	  // 	}
-	  // 	else {
-	  // 		setTimeout(function() {
-	  // 			innerGetWidth();
-	  // 		}, 1000)
-	  // 	}
-	  // }
-
-	  // innerGetWidth();
-  },
-
-  _addTouchEvents: function(slider) {
+  _addTouchEvents: function(slider, SlideStrip) {
 
   	let touchSlider = {
 
   		// The elements.
+  		// there were more in the original ;)
 	    el: {
-	      // slider: $("#slideshow"),
 	      holder: slider
-	      // imgSlide: $("#slideshow img")
-	      // imgSlide: $(".image-holder")
 	    },
 
+	    translate3dStart: undefined,
 		  touchstartx: undefined,
 		  touchmovex: undefined, 
 		  movex: undefined,
@@ -58,47 +42,94 @@ var SlideStrip = React.createClass({
 		  bindUIEvents: function() {
 		    this.el.holder.addEventListener("touchstart", function(event) {
 		      touchSlider.start(event);
-		      // this.start(event);
-		      // console.log(event)
 		    });
 			 
 				this.el.holder.addEventListener("touchmove", function(event) {
-			    // touchSlider.start(event);
-			    // console.log('touchmove')
-			 });
+			    touchSlider.move(event);
+				});
 			 
 				this.el.holder.addEventListener("touchend", function(event) {
-			      // touchSlider.start(event);
-			    // console.log('touchend')
-			 });
+			      touchSlider.end(event);
+				});
 		  },
 
 		  start: function(event) {
 		    // Test for flick.
 		    Window.longTouch = false;
 		    setTimeout(function() {
-		    	// Since the root of setTimout is window we can’t reference this. That’s why this variable says window.slider in front of it.
-		    	// I'm actually just attaching both to the Window object.
+		    	// Since the root of setTimout is window we can’t reference this.
+		    	// I'm just attaching both to the Window object.
 		      Window.longTouch = true;
 		    }, 250);
 
 		    // Get the original touch position.
 		    this.touchstartx = event.touches[0].pageX;
 
-		    console.log(this.touchstartx)
+		    // get the original 
+		    this.translate3dStart = slider.style.transform;
 
 		    // The movement gets all janky if there's a transition on the elements.
+		    // maybein the panning part from the tutorial. Doesn't seem janky to me
 		    // $('.animate').removeClass('animate');
-		  }
+		  },
 
+		  move: function(event) {
+			    	
+	    	this.touchmovex = event.touches[0].pageX;
+	      
+	      // Calculate distance to translate holder.
+	      this.movex = SlideStrip.props.currentSlide*SlideStrip.getSlideWidth() + (this.touchstartx - this.touchmovex)
+
+	      // Defines the speed the images should move at.
+	      // I'm not currently doing the panning thing though
+	      // var panx = 100-this.movex/6;
+
+	      // Now we need to add in some logic to handle edge cases.
+				// If you’re on the first slide or the last slide this logic
+				// will stop the image panning if you’re scrolling in the wrong
+				// direction (i.e. toward no content).
+				// This might not be the best way to handle this, but it works for me right now.
+	      if (this.movex <= slider.offsetWidth) { // Mine.
+	        
+	        this.el.holder.style.transform = 'translate3d(-' + this.movex + 'px,0,0)';
+	      }
+	      
+	      // the following was screwing up my implementation - Tony
+	      // also this is where the panning (doesn't) get used.
+	      // if (panx < 100) { // Corrects an edge-case problem where the background image moves without the container moving.
+	      //   this.el.imgSlide.css('transform','translate3d(-' + panx + 'px,0,0)');
+	      // }
+	    },
+
+	    end: function(event) {
+	      // Calculate the distance swiped.
+	      var absMove = Math.abs(SlideStrip.props.currentSlide*SlideStrip.getSlideWidth() - this.movex);
+
+	      // if it's swiped enough to be interpreted as the intention
+	      if (absMove > SlideStrip.getSlideWidth()/2 || window.longTouch === false) {
+	        
+	        if (this.movex > SlideStrip.props.currentSlide*SlideStrip.getSlideWidth()
+	        	&& SlideStrip.props.currentSlide < SlideStrip.props.slides.length - 1) {
+
+	          SlideStrip.props.forwardSlide();
+
+	        } else if (this.movex < SlideStrip.props.currentSlide*SlideStrip.getSlideWidth()
+	        	&& SlideStrip.props.currentSlide > 0) {
+	          
+	          SlideStrip.props.backwardSlide();
+	        }
+	      }
+
+	      else {
+	      	this.el.holder.style.transform = this.translate3dStart
+	      }
+	    }
 		}
-
 		touchSlider.init();
 	},
 
   setSlide: function setSlide(slide) {
 		let transformation = 'translate3d(-' + slide * this.getSlideWidth() + 'px,0,0)';
-		// document.querySelectorAll('.slide-strip')[0].style.transform = transformation;
 		this.slideStripRef.style.transform = transformation;
 	},
 
