@@ -11,12 +11,9 @@ var Work = React.createClass({
 	getInitialState: function() {
 
     var workItemsWithUrls = WorkItems.map(function(item) {
-      // console.log(item);
       item.url = item.title.replace(/ /g, '-').toLowerCase();
-      // console.log(item);
       return item
     });
-
 
     return {
       workItems: workItemsWithUrls,
@@ -59,9 +56,14 @@ var Work = React.createClass({
     
   setCategory: function(category) {
 
+      // console.log('this much')
+      // console.log(category)
+      // console.log(this.state.setCategoryInProgress)
+      // console.log('this.state.menuState', this.state.menuState)
+
+      
     if ((this.state.setCategoryInProgress === false) && (category !== this.state.category)) {
 
-      // console.log('this much')
 
       this.setState({
         setCategoryInProgress: true,

@@ -24,7 +24,7 @@ Finally, this site is also built in a truly progressively enhanced way. Go ahead
 		copy: 'Design and development',
 		slide: {
 			image: 'alfredocaceres.png',
-			longCopy: `Here's Alfredo's text. Write it.`,
+			longCopy: `This was a Design and Development project, with the emphasis on design, of the promotional website for the multi-style guitarist Alfredo C${String.fromCharCode(225)}ceres. I used Zurb’s Foundation for the structure, and the main emphasis here was using the wealth of strong media Alfredo has made to create a story flow that reflects his amazing talent. Alfredo plays often in various groups around LA and if you’re there you should definitely go check him out.`,
 			linkOut: 'http://alfredocaceres.com'
 		}
 	},
@@ -39,7 +39,7 @@ Finally, this site is also built in a truly progressively enhanced way. Go ahead
 			longCopy: `Enterprise web work. I worked for two years at Virgin America as the marketing department web developer. First I built emails and intergrated them into Oracle's Responsys system. Then I supported campaigns with landing pages and I produced the weekly 'fare' sale. The bottom line with all of it being, of course, to take care of the awesome brand that is (soon to be was!, maybe, so sad.) Virgin America.
 
 The real project of my work with Virgin was helping move them from their v2.0 website to their v3.0, as we were calling it. I lead the content port both to the newly designed look, as well as into a newly implemented cms. We moved from posting files on an ftp server, to a cms that fed data into an Angular front end.`,
-			linkOut: 'linkOut'
+			linkOut: 'https://virginamerica.com'
 		}
 	},
 	// Free Code Camp
@@ -81,7 +81,7 @@ Built with Node.js and Express. These are on heroku on their sandbox servers, so
 
 [unix time converter](http://timestamp-microsvc.herokuapp.com/)  
 [url shortener](http://url-shortify.herokuapp.com/)`,
-			linkOut: 'linkOut'
+			linkOut: 'http://freecodecamp.com'
 		}
 	},
 	{
@@ -140,7 +140,7 @@ The intro and outros for Old Navy Studio Spotlight videos.
 
 More Studio Spotlight animation. Clothing stop-motion.`,
 			// longCopy: `<p>some p</p>`,
-			linkOut: 'linkOut'
+			linkOut: null
 		}
 	},
 	{
@@ -158,13 +158,9 @@ These videos are for social media and were for supporting an Old Navy initiative
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/G-j2Gycr9WY" frameborder="0" allowfullscreen></iframe> -->
 
 <div id="playerSSKim"></div> `,
-			linkOut: 'linkOut'
+			linkOut: null
 		}
 	}
-
 ]
-
-
-
 
 module.exports = WorkItems;

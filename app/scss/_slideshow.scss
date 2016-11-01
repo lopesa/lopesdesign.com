@@ -9,8 +9,9 @@
 	overflow: hidden;
 	
 	@include flexy(row)
-	// justify-content: flex-start;
 	flex: 1 1 auto;
+
+	position: relative;
 	
 	.slide-holder {
 		background-color: $light-warm-grey-85;
@@ -33,13 +34,12 @@
 			color: $white;
 			@include freight-medium;
 			cursor: pointer;
-			z-index: 5;
+			z-index: 6;
 
 			&:hover {
 				background-color: $yellow-orange;
 			}
 		}
-
 	}
 
 	.slide-strip {
@@ -49,27 +49,29 @@
 		transition: transform 0.3s ease-out;
 	}
 
-	
-
 	.button {
+		@include flexy(row)
+		@include freight;
+
+		// to not fill padding with background-color
+		background-clip: content-box;
+
 		height: 100%;
 		width: 30px;
 
-		position: absolute;
 		z-index: 5;
-		background-color: none;
 
+		background-color: $white-20;
+		padding: 5px 5px;
 		color: $white;
 		font-size: 1.7em;
-
-
+		text-decoration: none;
 
 		@include breakpoint($ipad) {
 			font-size: 3em;
-			position: static;
 			background-color: $white-20;
-			// color: $white;
 			width: 100px;
+			padding: 15px 15px;
 		}
 
 		&.left {
@@ -87,46 +89,10 @@
 				right: initial;
 			}
 		}
-
-		@include flexy(row)
-
-		@include freight;
 		
-
-
-		text-decoration: none;
-
-		padding: 15px 15px;
-
-		// to not fill padding with background-color
-		background-clip: content-box;
-
-		// position: absolute;
-
 		&:hover {
-			// background-color: $red-orange-80;
 			color: $yellow-orange;
 			background-color: $bright-sage-20;
 		}
 	}
-
-	
-
-	// .example-enter {
-	//   opacity: 0.01;
-	//   transition: opacity .5s ease-in;
-	// }
-
-	// .example-enter.example-enter-active {
-	//   opacity: 1;
-	// }
-
-	// .example-leave {
-	//   opacity: 1;
-	//   transition: opacity .5s ease-in;
-	// }
-
-	// .example-leave.example-leave-active {
-	//   opacity: 0;
-	// }
 }

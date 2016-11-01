@@ -8,6 +8,7 @@ var SlideStrip = React.createClass({
 
 		this.setSlide(this.props.currentSlide);
 		this._addTouchEvents(this.slideStripRef, this);
+		// window.addEventListener("optimizedResize", this.setSlide);
 	},
 
 	setWidth: function() {
@@ -89,7 +90,8 @@ var SlideStrip = React.createClass({
 				// will stop the image panning if you’re scrolling in the wrong
 				// direction (i.e. toward no content).
 				// This might not be the best way to handle this, but it works for me right now.
-	      if (this.movex <= slider.offsetWidth) { // Mine.
+
+	      if (this.movex <= slider.offsetWidth - SlideStrip.getSlideWidth()) { // Mine.
 	        
 	        this.el.holder.style.transform = 'translate3d(-' + this.movex + 'px,0,0)';
 	      }
