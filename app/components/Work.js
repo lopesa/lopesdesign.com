@@ -1,22 +1,28 @@
 var React = require('react');
 var WorkItems = require('../constants/WorkItems');
-var Slideshow = require('../components/Slideshow');
-var Card = require('../components/Card')
-var Cardholder = require('../components/Cardholder')
-
-import { browserHistory } from 'react-router'
-
 
 var Work = React.createClass({
-	getInitialState: function() {
 
-    var workItemsWithUrls = WorkItems.map(function(item) {
+  getWorkItemsWithUrls: function() {
+
+    // take the base json file of workitems
+    // and add a field of urls
+
+    // curious what the best practice is here,
+    // to do this here or in the json file...
+    // this may actually add cpu overhead??
+
+    return WorkItems.map(function(item) {
       item.url = item.title.replace(/ /g, '-').toLowerCase();
       return item
-    });
+    })   
+  },
+
+	getInitialState: function() {
 
     return {
-      workItems: workItemsWithUrls,
+      workItems: this.getWorkItemsWithUrls(),
+      // headersize is for the word "work"
       headerSize: this.getHeaderSize(this.props),
       menuState: 'cardHolder',
       setCategoryInProgress: false,
@@ -25,101 +31,66 @@ var Work = React.createClass({
 	},
 
   toggleMenuState: function() {
-    
     this.setState({menuState: this.state.menuState === 'cardHolder' ? 'slideshow' : 'cardHolder'})
-
   },
 
   setSetMenuInProgress: function(value) {
-    this.setState({
-      setCategoryInProgress: value
-    })
+    this.setState({ setCategoryInProgress: value })
   },
 
   getHeaderSize: function(props) {
-
-      if (Object.keys(props.params).length === 1) {
-        
-        // console.log(Object.keys(props.params).length);
-        // return {fontSize: "3.5em"}
-        return "small"
-      }
-
-      else {
-        // return {fontSize: "6em"}
-        return "large"
-      }
-  
+    return Object.keys(props.params).length === 1 ? "small" : "large"
   },
 
-  
-    
   setCategory: function(category) {
 
-      // console.log('this much')
-      // console.log(category)
-      // console.log(this.state.setCategoryInProgress)
-      // console.log('this.state.menuState', this.state.menuState)
+    let isCategory = function(element) {
+      return element.type === category
+    };
 
-      
-    if ((this.state.setCategoryInProgress === false) && (category !== this.state.category)) {
+    let isNotCategory = function(element) {
+      return element.type !== category
+    };
 
+    // if ((this.state.setCategoryInProgress === false) && (category !== this.state.category)) {
+    if (this.state.setCategoryInProgress === false) {
 
-      this.setState({
-        setCategoryInProgress: true,
-        category: category
-      });
+      if (this.state.menuState === 'cardHolder') {
 
-      var newWorkItems = this.state.workItems.sort(function(a,b) {
-            // console.log(a.type)
-        if (a.type === category) {
-          // console.log(true)
-          return -1;
+        if (category !== this.state.category) {
+
+          let newWorkItems = WorkItems.filter(isCategory).concat(WorkItems.filter(isNotCategory))
+
+          this.setState({
+            workItems: newWorkItems,
+            setCategoryInProgress: true,
+            category: category
+          });
         }
-        if (a.type !== category) {
-          return 1
-        }
-        return 0
-      });
-
-      this.setState({
-        workItems: newWorkItems
-        // setCategoryActive: false
-      });
+      }
     
-      if (this.state.menuState === 'slideshow') {
-        // console.log('slidehow must be open')
+      else if (this.state.menuState === 'slideshow') {
+        
         var firstOfCategory = this.state.workItems.filter(function(item) {
            return item.type === category
           });
 
-
         firstOfCategory = firstOfCategory[0];
 
-        browserHistory.push('/work/' + firstOfCategory.url);
-
-
-        this.setSetMenuInProgress(false)
+        this.props.history.push('/work/' + firstOfCategory.url);
       }
     }
-
   },
 
   componentWillReceiveProps: function(nextProps) {
 
-    // console.log(this.getHeaderSize(nextProps))
+    this.setState({ headerSize: this.getHeaderSize(nextProps) })
     
-    this.setState({headerSize: this.getHeaderSize(nextProps)})
-    // console.log(this.props)
     if(nextProps.location.pathname === '/work/') {
       this.setState({menuState: 'cardHolder'});
     }
-
-    // this.getHeaderSize(nextProps);
   },
 
-
- 
 
   render: function(){
 
@@ -131,10 +102,7 @@ var Work = React.createClass({
          setCategoryInProgress: this.state.setCategoryInProgress,
          setSetMenuInProgress: this.setSetMenuInProgress,
          category: this.state.category
-        // activeSlide: this.state.activeSlide
        }))
-
-    
 
     return(
       <div className="work">
@@ -153,9 +121,7 @@ var Work = React.createClass({
           </ul>
         </div>
         
-        
         {childrenWithProps}
-      	
       </div>
     )
   }

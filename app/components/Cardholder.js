@@ -18,7 +18,7 @@ var Cardholder = React.createClass({
   componentDidMount: function() {
 
     
-    var cardArray = this.buildCardArray();
+    var cardArray = this.buildCardArray(this.props.workItems);
     var that = this;
 
     var internalAddCardToState = this.addCardToState
@@ -31,31 +31,24 @@ var Cardholder = React.createClass({
 
   componentWillReceiveProps: function(nextprops) {
 
-
-
-    // if (nextprops.category !== this.state.category) {
     if (nextprops.setCategoryInProgress === true) {
 
       console.log('in cardholder: this.props.category !== this.state.category')
 
       this.setState({
         cardArray: [],
+        category: nextprops.category
       });
 
-      var cardArray = this.buildCardArray();
+      var cardArray = this.buildCardArray(nextprops.workItems);
       var that = this;
-
       var internalAddCardToState = this.addCardToState
 
       cardArray.forEach(function(item){
         setTimeout(internalAddCardToState.bind(that, item), 175 * item.key)
       });
 
-      this.show
-
-      this.setState({
-        category: nextprops.category
-      });
+      this.props.setSetMenuInProgress(false);
     }
   },
 
@@ -67,15 +60,12 @@ var Cardholder = React.createClass({
     
     this.setState({cardArray: tempCardStack});
 
-
-
     if (this.state.cardArray.length === this.props.workItems.length) {
       this.props.setSetMenuInProgress(false);
     }
-
   },
 
-  buildCardArray: function() {
+  buildCardArray: function(workItems) {
 
     var internalCardArray = [];
 
@@ -83,22 +73,19 @@ var Cardholder = React.createClass({
 
       internalCardArray.push(
         <Card 
-          content={this.props.workItems[card]} 
+          content={workItems[card]} 
           key={card}
           activeSlide={this.props.activeSlide}
           toggleMenuState={this.props.toggleMenuState} />
       )
-
     };
 
-    for (var card in this.props.workItems) {
+    for (var card in workItems) {
 
       addCard.call(this, card);
-        
     };
 
     return internalCardArray;
-
   },
 
 

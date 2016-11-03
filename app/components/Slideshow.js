@@ -43,7 +43,7 @@ var Slideshow = React.createClass({
 			thisIndex,
 			url= passedProps.params.slideName;
 		
-		this.props.workItems.forEach(function(item, index) {
+		passedProps.workItems.forEach(function(item, index) {
 			
 			if (item.url === url) {
 				thisSlide = item;
@@ -82,7 +82,14 @@ var Slideshow = React.createClass({
 
 	componentWillReceiveProps: function(nextprops) {
 		this.setState(this.getStateFromUrl(nextprops));
+		// console.log(this.state)
+		// console.log('nextprops in slideshow', nextprops)
   },
+
+  
+	// shouldComponentUpdate: function() {
+ //  	return false;
+ //  },
 
   setSlideWidth: function() {
   	
@@ -168,7 +175,9 @@ var Slideshow = React.createClass({
 				
 				<div className="slide-holder">
 
-					<Link to={'/work'} className='close'>&times;</Link>
+					<Link to={'/work'}
+						className='close'
+						onClick={this.props.toggleMenuState}>&times;</Link>
 
 					<SlideStrip slides={this.props.workItems}
 						currentSlide={this.state.thisIndex}
