@@ -4,7 +4,7 @@
   "description": "the perpetual reworking of my portfolio website, this time using React.js",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base public/ --inline --history-api-fallback --host 192.168.1.3",
+    "dev": "webpack-dev-server --content-base public/ --inline --history-api-fallback",
     "prod": "NODE_ENV=production webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -15,7 +15,7 @@ var Work = React.createClass({
     return WorkItems.map(function(item) {
       item.url = item.title.replace(/ /g, '-').toLowerCase();
       return item
-    })   
+    })
   },
 
 	getInitialState: function() {
@@ -68,9 +68,9 @@ var Work = React.createClass({
           });
         }
       }
-    
+
       else if (this.state.menuState === 'slideshow') {
-        
+
         var firstOfCategory = this.state.workItems.filter(function(item) {
            return item.type === category
           });
@@ -85,7 +85,7 @@ var Work = React.createClass({
   componentWillReceiveProps: function(nextProps) {
 
     this.setState({ headerSize: this.getHeaderSize(nextProps) })
-    
+
     if(nextProps.location.pathname === '/work/') {
       this.setState({menuState: 'cardHolder'});
     }
@@ -106,22 +106,24 @@ var Work = React.createClass({
 
     return(
       <div className="work">
-        
-        <div className='work-header'>
-        	<h2 className={this.state.headerSize}>
-        		Work
-        	</h2>
-          <ul>
-            <li
-              onClick={this.setCategory.bind(this, 'web')}> Web</li>
-            <li 
-              onClick={this.setCategory.bind(this, 'photo')}>Photography</li>
-            <li
-              onClick={this.setCategory.bind(this, 'video')}>Video / Motion</li>
-          </ul>
+        <div className="container">
+
+          <div className='work-header'>
+          	<h2 className={this.state.headerSize}>
+          		Work
+          	</h2>
+            <ul>
+              <li
+                onClick={this.setCategory.bind(this, 'web')}> Web</li>
+              <li
+                onClick={this.setCategory.bind(this, 'photo')}>Photography</li>
+              <li
+                onClick={this.setCategory.bind(this, 'video')}>Video / Motion</li>
+            </ul>
+          </div>
+
+          {childrenWithProps}
         </div>
-        
-        {childrenWithProps}
       </div>
     )
   }

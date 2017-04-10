@@ -17,6 +17,8 @@
 @import "about";
 
 @import "FourOfour";
+@import "mixins";
+
 
 ////////////////////////////////
 // HIDING FOUT
@@ -66,6 +68,16 @@ h2 {
 li {
 	list-style-type: none;
 	color: inherit;
+}
+
+.container {
+	max-width: 100%;
+	@include breakpoint($real-wide) {
+		max-width: 1500px;
+	}
+	height: 100vh;
+	@include flexy(column);
+	justify-content: flex-start;
 }
 
 .copy {
