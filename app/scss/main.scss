@@ -91,16 +91,16 @@ li {
 		@include freight-semibold;
 	}
 
-	a {
-		@include base-transition;
+	// a {
+	// 	@include base-transition;
 
-		// background-color: $red-orange-20;
-		background-color: $bright-sage-20;
-		color: $warm-grey;
+	// 	// background-color: $red-orange-20;
+	// 	background-color: $bright-sage-20;
+	// 	color: $warm-grey;
 
-		&:hover {
-			// background-color: $red-orange-50;
-			background-color: $white;
-		}
-	}
+	// 	&:hover {
+	// 		// background-color: $red-orange-50;
+	// 		background-color: $white;
+	// 	}
+	// }
 }

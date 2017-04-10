@@ -1,26 +1,26 @@
 var WorkItems = [
-	// bento
+	// apps and features
 	{
 		type: '',
 		image: 'apps_sm.png',
-		title: 'Apps and features',
+		title: 'Apps',
 		copy: 'Dev',
 		slide: {
 			image: '',
 			longCopy: `
-<a href="http://bentoboard.co"><img src="/img/bento.png" class='image'/></a>
+<a href="http://bentoboard.co"><img src="/img/bento.png" class='image border'/></a>
 
-<strong>Bento</strong> is a modularized productivity app that I built with a team of three other engineers as my thesis project at Hack Reactor. We used React.js, Redux, Firebase, Node.js to build and we hosted on the Google Cloud platform. The app includes a handful of components that the user can choose add to their dashboard. I especially concentrated on a module for photgraphers that encourages the user to take a photo per day. It leverages the html5 camera api via the input form field and uses the canvas element to perform some manipulations on the image to ensure images taken on all devices are rotated properly. This app offers a highly responsive and customizable take on the productivity app form
+<strong><a href="http://bentoboard.co" class="link-style">Bento</a></strong> is a modularized productivity app that I built with a team of three other engineers as my thesis project at Hack Reactor. We used React.js, Redux, Firebase, Node.js to build and we hosted on the Google Cloud platform. The app includes a handful of components that the user can choose add to their dashboard. I especially concentrated on a module for photgraphers that encourages the user to take a photo per day. It leverages the html5 camera api via the input form field and uses the canvas element to perform some manipulations on the image to ensure images taken on all devices are rotated properly. This app offers a highly responsive and customizable take on the productivity app form
 
 <hr class='rule'></hr>
 
-<a href="https://brandybucks.herokuapp.com/"><img src="/img/llama.jpg" class='image'/></a>
+<a href="https://brandybucks.herokuapp.com/"><img src="/img/llama.jpg" class='image border'/></a>
 
-<strong>Llama</strong> is an app to promote active student records in one source. We recognized a need in the community of students with special needs and their teachers and parents for a succinct record keeping app to address the quantity of mandatory records. We envision quick moments of in-the-moment notes to replace a daily chore of accumulated data entry.`,
+<strong><a href="https://brandybucks.herokuapp.com/" class="link-style">Llama</a></strong> is an app to promote active student records in one source. We recognized a need in the community of students with special needs and their teachers and parents for a succinct record keeping app to address the quantity of mandatory records. We envision quick moments of in-the-moment notes to replace a daily chore of accumulated data entry.`,
 			linkOut: ''
 		}
 	},
-	// Website design and development
+	// Websites
 	{
 		type: '',
 		image: 'teamtedtile_sm.jpg',
@@ -43,67 +43,94 @@ This was a Design and Development project, with the emphasis on design, of the p
 			linkOut: ''
 		}
 	},
+	//learning
 	{
 		type: '',
-		image: 'hackreactor.png',
+		image: 'learning.png',
 		title: 'Learning',
-		copy: 'Ongoing',
+		copy: 'Practice !== Perfect',
 		slide: {
-			longCopy: `[Free Code Camp](http://freecodecamp.com) is an outstanding, free, opensource "bootcamp" that I've been using since late 2015 to solidify my core javascript skills, and to build out their curriculum's skillset, which is React, Express, Mongo, Node, and d3. Coming at web development from the visual side I never, say, wrote many algorithms, so this is a great opportunity to do some of that sort of thing and then a lot more. My favorite thing about it is that anyone could use it, and it's really good. Anyway, I'm so glad I found it.
+			longCopy: `
+I'm a self taught developer, mostly. I recently finished Hack Reactor, so I supercharged my selftaughtedness. Same with design too, my degree is in Fine Arts which is a little different. I'm always learning. I enjoy it, there's tons of content to look at. I'm concentrating on Engineering now.
 
-Here are embeds or links to most of the projects I've made so far:
+Here's a few select projects and exercises I did at Hack Reactor and even a few from freecodecamp. FCC is an awesome thing and I give it credit for my being able to get to and through HR. For a more in depth look at what I've been up to please check out my <a href='https://github.com/lopesa/' class="link-style" target="_blank">github</a>
 
-#### [Algorithms](https://github.com/lopesa/freecodecamp-projects/blob/master/algorithms.js)
+#### Hack Reactor
 
-#### Front End Projects
+Data Structures: <a href='https://github.com/lopesa/data-structures' class="link-style" target="_blank">github.com/lopesa/data-structures</a>
 
-"Pomodoro Clock", to make sure you don't take too many facebook breaks. I also think it works in the other direction too, so you don't get absorbed in a challenge and forget to stretch your shoulders for 6 hours. So anyway, it's a work-break timer thing. I worked on a UI that reflected that we are looking at the *relationship* between work periods and break periods
+A Twitter clone: <a href='https://github.com/lopesa/chatterbox-client' class="link-style" target="_blank">github.com/lopesa/chatterbox-client</a>
 
-<iframe height='398' scrolling='no' src='//codepen.io/lopesa/embed/aNNzrR/?height=398&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/aNNzrR/'>Pomodoro Clock - FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+A YouTube clone using React: <a href='https://github.com/lopesa/recast.ly' class="link-style" target="_blank">github.com/lopesa/recast.ly</a>
 
-"Random" (ok, so it picks from, like, 10) quote generator, which I include mostly because I found a pretty hilarious bunch of programmers' code comments
+#### FCC
 
-<iframe height='377' scrolling='no' src='//codepen.io/lopesa/embed/qbeKOY/?height=377&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/qbeKOY/'>Random Quote Machine - FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+Pomodoro Clock: <a href="http://codepen.io/lopesa/pen/aNNzrR" class="link-style" target="_blank">http://codepen.io/lopesa/pen/aNNzrR</a>
 
-#### React.js Projects
+Markdown Translator: <a href="http://codepen.io/lopesa/pen/BKxroB" class="link-style" target="_blank">http://codepen.io/lopesa/pen/BKxroB</a>
 
-Markdown Translator. Type **here**, watch it update **there**.
+"Random" quote generator (pretty funny code comments): <a href="http://codepen.io/lopesa/pen/qbeKOY" class="link-style" target="_blank">http://codepen.io/lopesa/pen/qbeKOY</a>`,
 
-<iframe height='486' scrolling='no' src='//codepen.io/lopesa/embed/BKxroB/?height=486&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/BKxroB/'>React.js Markdown Translator — FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+// 			[Free Code Camp](http://freecodecamp.com) is an outstanding, free, opensource "bootcamp" that I've been using since late 2015 to solidify my core javascript skills, and to build out their curriculum's skillset, which is React, Express, Mongo, Node, and d3. Coming at web development from the visual side I never, say, wrote many algorithms, so this is a great opportunity to do some of that sort of thing and then a lot more. My favorite thing about it is that anyone could use it, and it's really good. Anyway, I'm so glad I found it.
 
-Free Code Camp Brownie Points leader board. (Brownie Points are awarded for answering questions on the gitter boards.) Consumes an api from here: https://fcctop100.herokuapp.com/api/fccusers/top/recent (or /allTime, instead of /recent)
+// Here are embeds or links to most of the projects I've made so far:
 
-<iframe height='461' scrolling='no' src='//codepen.io/lopesa/embed/VagvgK/?height=461&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/VagvgK/'>React.js api consumption — FCC Leaderboard </a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+// #### [Algorithms](https://github.com/lopesa/freecodecamp-projects/blob/master/algorithms.js)
 
-#### Api builds
-Built with Node.js and Express. These are on heroku on their sandbox servers, so they take a moment to "Wake up". That's a good exercise of course, in using all public servers instead of setting up from a linux box like I usually do. Scaling and whatnot.
+// #### Front End Projects
 
-[unix time converter](http://timestamp-microsvc.herokuapp.com/)
-[url shortener](http://url-shortify.herokuapp.com/)`,
+// "Pomodoro Clock", to make sure you don't take too many facebook breaks. I also think it works in the other direction too, so you don't get absorbed in a challenge and forget to stretch your shoulders for 6 hours. So anyway, it's a work-break timer thing. I worked on a UI that reflected that we are looking at the *relationship* between work periods and break periods
+
+// <iframe height='398' scrolling='no' src='//codepen.io/lopesa/embed/aNNzrR/?height=398&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/aNNzrR/'>Pomodoro Clock - FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+
+// "Random" (ok, so it picks from, like, 10) quote generator, which I include mostly because I found a pretty hilarious bunch of programmers' code comments
+
+// <iframe height='377' scrolling='no' src='//codepen.io/lopesa/embed/qbeKOY/?height=377&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/qbeKOY/'>Random Quote Machine - FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+
+// #### React.js Projects
+
+// Markdown Translator. Type **here**, watch it update **there**.
+
+// <iframe height='486' scrolling='no' src='//codepen.io/lopesa/embed/BKxroB/?height=486&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/BKxroB/'>React.js Markdown Translator — FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+
+// Free Code Camp Brownie Points leader board. (Brownie Points are awarded for answering questions on the gitter boards.) Consumes an api from here: https://fcctop100.herokuapp.com/api/fccusers/top/recent (or /allTime, instead of /recent)
+
+// <iframe height='461' scrolling='no' src='//codepen.io/lopesa/embed/VagvgK/?height=461&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/VagvgK/'>React.js api consumption — FCC Leaderboard </a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.
+// </iframe>
+
+// #### Api builds
+// Built with Node.js and Express. These are on heroku on their sandbox servers, so they take a moment to "Wake up". That's a good exercise of course, in using all public servers instead of setting up from a linux box like I usually do. Scaling and whatnot.
+
+// [unix time converter](http://timestamp-microsvc.herokuapp.com/)
+// [url shortener](http://url-shortify.herokuapp.com/),
 			linkOut: 'http://freecodecamp.com'
 		}
 	},
+	// photography
 	{
 		type: '',
 		image: 'photography_sm.jpg',
 		title: 'Photography',
 		copy: 'Perspective',
 		slide: {
-			image: 'photography.png',
-			longCopy: `I've been taking photos most of my life, so it's one of the mediums I've been with the longest and I love it because it's so accessible. And yet deceptively so. While it's fairly easy to get a good photo, it can be very challenging to get something that goes beyond that. (It can be magically simple too, but that's a different story.)
+			image: '',
+			longCopy: `
+<img src='/img/photography.png' class='image'/>
+
+I've been taking photos most of my life, so it's one of the mediums I've been with the longest and I love it because it's so accessible. And yet deceptively so. While it's fairly easy to get a good photo, it can be very challenging to get something that goes beyond that. (It can be magically simple too, but that's a different story.)
 
 At the moment I find myself taking shots of travel, nature, food, things at macro level and sometimes when I'm really feeling transcendent, abstract shots and textural things.
 
-I have many of my last 5 years of photos up on flickr. I hope you'll [have a look](https://www.flickr.com/photos/57613898@N08/)!`,
+I have many of my last 5 years of photos up on flickr. I hope you'll <a href="https://www.flickr.com/photos/57613898@N08/" class="link-style" target="_blank">have a look!</a>`,
 			linkOut: 'https://www.flickr.com/photos/57613898@N08/'
 		}
 	},
+	// motion
 	{
 		type: '',
 		image: 'studiospotlight_sm.jpg',
 		title: 'Motion',
-		copy: 'Hollywood',
+		copy: 'Emotion',
 		slide: {
 		longCopy: `<object class="facebookFlash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="520" height="540" id="facebook_top5_MAY_F_WITHLOADER" align="middle">
 <param name="allowScriptAccess" value="sameDomain" />
@@ -167,9 +194,12 @@ The real project of my work with Virgin was helping move them from their v2.0 we
 		title: 'Enterprise Visual',
 		copy: 'Look!s',
 		slide: {
-			image: 'on-photography.jpg',
+			image: '',
 			// longCopy: `![](../img/on-denim-wall.jpg)`,
-			longCopy: `I worked at Old Navy for quite a few years. I started as a graphic designer and was doing  some drawing too for them. Then we moved the communication to photography and I had the opportunity to really practice photography, mostly in the product photography context, for years. And of course my personal photography grew during this time too. There was time for it even to grow into some motion and video work, which I have on another panel.
+			longCopy: `
+<img src="/img/on-photography.jpg" class='image' />
+
+I worked at Old Navy for quite a few years. I started as a graphic designer and was doing  some drawing too for them. Then we moved the communication to photography and I had the opportunity to really practice photography, mostly in the product photography context, for years. And of course my personal photography grew during this time too. There was time for it even to grow into some motion and video work, which I have on another panel.
 
 Of course it wasn't limited to only the capturing of the photos but to the whole workflows to get images generated efficiently. There was even a funny quirk in the architecture of our mock store space that had me photoshopping walls`,
 			linkOut: null

@@ -34,8 +34,11 @@
 		width: 100%;
 		flex: 0 0 auto;
 		cursor: pointer;
-		border: 1px solid $light-grey;
 		margin-bottom: 15px;
+
+		&.border {
+			border: 1px solid $light-grey;
+		}
 		// height: 140px;
 
 
@@ -63,6 +66,19 @@
 
 		@include breakpoint($ipad) {
 			width: 75%;
+		}
+
+		.link-style {
+			@include base-transition;
+
+			// background-color: $red-orange-20;
+			background-color: $bright-sage-20;
+			color: $warm-grey;
+
+			&:hover {
+				// background-color: $red-orange-50;
+				background-color: $white;
+			}
 		}
 
 
