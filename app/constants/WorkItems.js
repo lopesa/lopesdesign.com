@@ -1,53 +1,53 @@
 var WorkItems = [
-	// Team Ted Tile
+	// bento
 	{
-		type: 'web',
-		image: 'teamtedtile_sm.jpg',
-		title: 'Team Ted Tile',
-		copy: 'Design and development',
+		type: '',
+		image: 'apps_sm.png',
+		title: 'Apps and features',
+		copy: 'Dev',
 		slide: {
-			image: 'teamtedtile.png',
-			longCopy: `A complete design and development project. Team Ted Tile is a Bay Area tilesetting business who needed a website to show off their amazing work. I really just wanted to get the photos front and center asap. So then the most important thing technically was to make sure the loading time was as small as possible and managed throughout. After all, it being such an image heavy site, it has the potential to be a loader curmudgeon. So I really explored techniques to get image loading in the background.
+			image: '',
+			longCopy: `
+<a href="http://bentoboard.co"><img src="/img/bento.png" class='image'/></a>
+
+<strong>Bento</strong> is a modularized productivity app that I built with a team of three other engineers as my thesis project at Hack Reactor. We used React.js, Redux, Firebase, Node.js to build and we hosted on the Google Cloud platform. The app includes a handful of components that the user can choose add to their dashboard. I especially concentrated on a module for photgraphers that encourages the user to take a photo per day. It leverages the html5 camera api via the input form field and uses the canvas element to perform some manipulations on the image to ensure images taken on all devices are rotated properly. This app offers a highly responsive and customizable take on the productivity app form
+
+<hr class='rule'></hr>
+
+<a href="https://brandybucks.herokuapp.com/"><img src="/img/llama.jpg" class='image'/></a>
+
+<strong>Llama</strong> is an app to promote active student records in one source. We recognized a need in the community of students with special needs and their teachers and parents for a succinct record keeping app to address the quantity of mandatory records. We envision quick moments of in-the-moment notes to replace a daily chore of accumulated data entry.`,
+			linkOut: ''
+		}
+	},
+	// Website design and development
+	{
+		type: '',
+		image: 'teamtedtile_sm.jpg',
+		title: 'Websites',
+		copy: 'Design & Build',
+		slide: {
+			image: '',
+			longCopy: `<a href='http://teamtedtile.com'><img src='/img/teamtedtile.png' class='image'></a>
+			A complete design and development project. Team Ted Tile is a Bay Area tilesetting business who needed a website to show off their amazing work. I really just wanted to get the photos front and center asap. So then the most important thing technically was to make sure the loading time was as small as possible and managed throughout. After all, it being such an image heavy site, it has the potential to be a loader curmudgeon. So I really explored techniques to get image loading in the background.
 
 I also spent time on the slideshow on this project. Slideshows tend to live somewhere in most projects I do, so over time I've been zeroing in on my perfect implementation of one. (I like to avoid plug-ins in favor of diy, except when I don't). Anyway this one turned out really well. I got it most of the way there and then ended up following a tutorial by a squarespace guy for the sweet mobile slide action.
 
-Finally, this site is also built in a truly progressively enhanced way. Go ahead, turn off javascript, it'll still work fine! It just uses a bunch of, you know, going back and forth to the server, old school style. It's built using simple technologies, other than the html5 languages themselves, just jQuery really.`,
-			linkOut: 'http://teamtedtile.com'
-		}
-	},
-	// Alfredo
-	{
-		type: 'web',
-		image: 'alfredocaceres_sm.jpg',
-		// title: `Alfredo C${&aacute;}ceres`,
-		title: `Alfredo C${String.fromCharCode(225)}ceres`,
-		copy: 'Design and development',
-		slide: {
-			image: 'alfredocaceres.png',
-			longCopy: `This was a Design and Development project, with the emphasis on design, of the promotional website for the multi-style guitarist Alfredo C${String.fromCharCode(225)}ceres. I used Zurb’s Foundation for the structure, and the main emphasis here was using the wealth of strong media Alfredo has made to create a story flow that reflects his amazing talent. Alfredo plays often in various groups around LA and if you’re there you should definitely go check him out.`,
-			linkOut: 'http://alfredocaceres.com'
-		}
-	},
-	// Virgin America
-	{
-		type: 'web',
-		image: 'virgin_sm.jpg',
-		title: 'Virgin America',
-		copy: 'Enterprise web work',
-		slide: {
-			image: 'virgin.png',
-			longCopy: `Enterprise web work. I worked for two years at Virgin America as the marketing department web developer. First I built emails and intergrated them into Oracle's Responsys system. Then I supported campaigns with landing pages and I produced the weekly 'fare' sale. The bottom line with all of it being, of course, to take care of the awesome brand that is (soon to be was!, maybe, so sad.) Virgin America.
+Finally, this site is also built in a truly progressively enhanced way. Go ahead, turn off javascript, it'll still work fine! It just uses a bunch of, you know, going back and forth to the server, old school style. It's built using simple technologies, other than the html5 languages themselves, just jQuery really.
 
-The real project of my work with Virgin was helping move them from their v2.0 website to their v3.0, as we were calling it. I lead the content port both to the newly designed look, as well as into a newly implemented cms. We moved from posting files on an ftp server, to a cms that fed data into an Angular front end.`,
-			linkOut: 'https://virginamerica.com'
+<hr class='rule'></hr>
+
+<a href='http://alfredocaceres.com'><img src='/img/alfredocaceres.png' class='image'></a>
+
+This was a Design and Development project, with the emphasis on design, of the promotional website for the multi-style guitarist Alfredo C${String.fromCharCode(225)}ceres. I used Zurb’s Foundation for the structure, and the main emphasis here was using the wealth of strong media Alfredo has made to create a story flow that reflects his amazing talent. Alfredo plays often in various groups around LA and if you’re there you should definitely go check him out.`,
+			linkOut: ''
 		}
 	},
-	// Free Code Camp
 	{
-		type: 'web',
-		image: 'fcc_sm.png',
-		title: 'Free Code Camp',
-		copy: 'Skill building fun school',
+		type: '',
+		image: 'hackreactor.png',
+		title: 'Learning',
+		copy: 'Ongoing',
 		slide: {
 			longCopy: `[Free Code Camp](http://freecodecamp.com) is an outstanding, free, opensource "bootcamp" that I've been using since late 2015 to solidify my core javascript skills, and to build out their curriculum's skillset, which is React, Express, Mongo, Node, and d3. Coming at web development from the visual side I never, say, wrote many algorithms, so this is a great opportunity to do some of that sort of thing and then a lot more. My favorite thing about it is that anyone could use it, and it's really good. Anyway, I'm so glad I found it.
 
@@ -55,9 +55,9 @@ Here are embeds or links to most of the projects I've made so far:
 
 #### [Algorithms](https://github.com/lopesa/freecodecamp-projects/blob/master/algorithms.js)
 
-#### Front End Projects  
+#### Front End Projects
 
-"Pomodoro Clock", to make sure you don't take too many facebook breaks. I also think it works in the other direction too, so you don't get absorbed in a challenge and forget to stretch your shoulders for 6 hours. So anyway, it's a work-break timer thing. I worked on a UI that reflected that we are looking at the *relationship* between work periods and break periods 
+"Pomodoro Clock", to make sure you don't take too many facebook breaks. I also think it works in the other direction too, so you don't get absorbed in a challenge and forget to stretch your shoulders for 6 hours. So anyway, it's a work-break timer thing. I worked on a UI that reflected that we are looking at the *relationship* between work periods and break periods
 
 <iframe height='398' scrolling='no' src='//codepen.io/lopesa/embed/aNNzrR/?height=398&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/aNNzrR/'>Pomodoro Clock - FCC</a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
 
@@ -76,19 +76,19 @@ Free Code Camp Brownie Points leader board. (Brownie Points are awarded for answ
 <iframe height='461' scrolling='no' src='//codepen.io/lopesa/embed/VagvgK/?height=461&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/lopesa/pen/VagvgK/'>React.js api consumption — FCC Leaderboard </a> by Tony Lopes (<a href='http://codepen.io/lopesa'>@lopesa</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-#### Api builds  
-Built with Node.js and Express. These are on heroku on their sandbox servers, so they take a moment to "Wake up". That's a good exercise of course, in using all public servers instead of setting up from a linux box like I usually do. Scaling and whatnot.  
+#### Api builds
+Built with Node.js and Express. These are on heroku on their sandbox servers, so they take a moment to "Wake up". That's a good exercise of course, in using all public servers instead of setting up from a linux box like I usually do. Scaling and whatnot.
 
-[unix time converter](http://timestamp-microsvc.herokuapp.com/)  
+[unix time converter](http://timestamp-microsvc.herokuapp.com/)
 [url shortener](http://url-shortify.herokuapp.com/)`,
 			linkOut: 'http://freecodecamp.com'
 		}
 	},
 	{
-		type: 'photo',
+		type: '',
 		image: 'photography_sm.jpg',
-		title: 'My Photography',
-		copy: 'Exploring life through a lens',
+		title: 'Photography',
+		copy: 'Perspective',
 		slide: {
 			image: 'photography.png',
 			longCopy: `I've been taking photos most of my life, so it's one of the mediums I've been with the longest and I love it because it's so accessible. And yet deceptively so. While it's fairly easy to get a good photo, it can be very challenging to get something that goes beyond that. (It can be magically simple too, but that's a different story.)
@@ -100,24 +100,10 @@ I have many of my last 5 years of photos up on flickr. I hope you'll [have a loo
 		}
 	},
 	{
-		type: 'photo',
-		image: 'on-photography_sm.jpg',
-		title: 'Old Navy Photography',
-		copy: 'Core work',
-		slide: {
-			image: 'on-photography.jpg',
-			// longCopy: `![](../img/on-denim-wall.jpg)`,
-			longCopy: `I worked at Old Navy for quite a few years. I started as a graphic designer and was doing  some drawing too for them. Then we moved the communication to photography and I had the opportunity to really practice photography, mostly in the product photography context, for years. And of course my personal photography grew during this time too. There was time for it even to grow into some motion and video work, which I have on another panel.
-
-Of course it wasn't limited to only the capturing of the photos but to the whole workflows to get images generated efficiently. There was even a funny quirk in the architecture of our mock store space that had me photoshopping walls`,
-			linkOut: null
-		}
-	},
-	{
-		type: 'video',
+		type: '',
 		image: 'studiospotlight_sm.jpg',
-		title: 'Motion and Animation',
-		copy: 'Just plain fun!',
+		title: 'Motion',
+		copy: 'Hollywood',
 		slide: {
 		longCopy: `<object class="facebookFlash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="520" height="540" id="facebook_top5_MAY_F_WITHLOADER" align="middle">
 <param name="allowScriptAccess" value="sameDomain" />
@@ -143,24 +129,53 @@ More Studio Spotlight animation. Clothing stop-motion.`,
 			linkOut: null
 		}
 	},
+// 	{
+// 		type: 'video',
+// 		image: 'videos_sm.jpg',
+// 		title: 'Short Videos',
+// 		copy: 'Putting it all together',
+// 		slide: {
+// 			longCopy: `<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5zMdyJ5lLQ" frameborder="0" allowfullscreen></iframe> -->
+
+// <div id="playerSSSarah"></div>
+
+// These videos are for social media and were for supporting an Old Navy initiative called Studio Spotlight that was an internal designer's personal line produced for select stores by ON. So we made videos to introduce the designers. These are a couple of my favorites, we made four total.
+
+// <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/G-j2Gycr9WY" frameborder="0" allowfullscreen></iframe> -->
+
+// <div id="playerSSKim"></div> `,
+// 			linkOut: null
+// 		}
+	// }
+	// Virgin America
 	{
-		type: 'video',
-		image: 'videos_sm.jpg',
-		title: 'Short Videos',
-		copy: 'Putting it all together',
+		type: '',
+		image: 'virgin_sm.jpg',
+		title: 'Enterprise Dev',
+		copy: 'Team Work',
 		slide: {
-			longCopy: `<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5zMdyJ5lLQ" frameborder="0" allowfullscreen></iframe> -->
+			image: 'virgin.png',
+			longCopy: `Enterprise web work. I worked for two years at Virgin America as the marketing department web developer. First I built emails and intergrated them into Oracle's Responsys system. Then I supported campaigns with landing pages and I produced the weekly 'fare' sale. The bottom line with all of it being, of course, to take care of the awesome brand that is Virgin America.
 
-<div id="playerSSSarah"></div> 
+The real project of my work with Virgin was helping move them from their v2.0 website to their v3.0. I led the content port both to the newly designed look, as well as into a newly implemented cms. We moved from posting files on an ftp server, to a cms that fed data into an Angular front end.`,
+			linkOut: 'https://virginamerica.com'
+		}
+	},
+	{
+		type: '',
+		image: 'on-photography_sm.jpg',
+		title: 'Enterprise Visual',
+		copy: 'Look!s',
+		slide: {
+			image: 'on-photography.jpg',
+			// longCopy: `![](../img/on-denim-wall.jpg)`,
+			longCopy: `I worked at Old Navy for quite a few years. I started as a graphic designer and was doing  some drawing too for them. Then we moved the communication to photography and I had the opportunity to really practice photography, mostly in the product photography context, for years. And of course my personal photography grew during this time too. There was time for it even to grow into some motion and video work, which I have on another panel.
 
-These videos are for social media and were for supporting an Old Navy initiative called Studio Spotlight that was an internal designer's personal line produced for select stores by ON. So we made videos to introduce the designers. These are a couple of my favorites, we made four total.  
-
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/G-j2Gycr9WY" frameborder="0" allowfullscreen></iframe> -->
-
-<div id="playerSSKim"></div> `,
+Of course it wasn't limited to only the capturing of the photos but to the whole workflows to get images generated efficiently. There was even a funny quirk in the architecture of our mock store space that had me photoshopping walls`,
 			linkOut: null
 		}
-	}
+	},
+
 ]
 
 module.exports = WorkItems;

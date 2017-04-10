@@ -37,7 +37,7 @@ var Slide = React.createClass({
 		// console.log(this.getSlideHolderWidth())
 		// console.log(document.getElementsByClassName('slide'));
 		// document.getElementsByClassName('slide')[0].style.width = this.getSlideHolderWidth() / 2 + 'px';
-		
+
 
 		// Array.from(document.getElementsByClassName('slide')).forEach(item => {
 		// 	console.log(item)
@@ -54,7 +54,7 @@ var Slide = React.createClass({
 			// document.body.appendChild(script);
 
 			// var player;
-	    
+
 	    // function onYouTubeIframeAPIReady() {
 	    // 	console.log('onYouTubeIframeAPIReady');
 	    //   player = new YT.Player('player', {
@@ -88,7 +88,7 @@ var Slide = React.createClass({
 
 
 
-	    
+
 	    YouTubeIframeLoader.load(function(YT) {
 		    new YT.Player('playerIntroOutro', {
 	        width: vidWidth,
@@ -178,7 +178,7 @@ var Slide = React.createClass({
 	// },
 
 
-	
+
 	render: function(){
 
 		return(
@@ -188,23 +188,25 @@ var Slide = React.createClass({
 	      <p className='title'>
         	{this.props.content.title}
         </p>
-        
+
         {(function(props) {
           if (props.image) {
-            return (<div
-							      	className='image'>
-							      	<a href={props.linkOut}>
-								      	<img src={'../img/' + props.image} />
-							      	</a>
-							      </div>); 
-          } 
+            return (
+            	<div
+				      	className='image'>
+				      	<a href={props.linkOut}>
+					      	<img src={'../img/' + props.image} />
+				      	</a>
+				      </div>
+				    );
+          }
         })(this.props.content.slide)}
-        
+
 	      <div className='copy' dangerouslySetInnerHTML={{__html: this.state.parsedLongCopy}}>
 	      </div>
 	    </div>
 	  )
-		
+
 	}
 });
 

@@ -112,14 +112,14 @@ var Work = React.createClass({
           	<h2 className={this.state.headerSize}>
           		Work
           	</h2>
-            <ul>
+            {/*<ul>
               <li
                 onClick={this.setCategory.bind(this, 'web')}> Web</li>
               <li
                 onClick={this.setCategory.bind(this, 'photo')}>Photography</li>
               <li
                 onClick={this.setCategory.bind(this, 'video')}>Video / Motion</li>
-            </ul>
+            </ul>*/}
           </div>
 
           {childrenWithProps}

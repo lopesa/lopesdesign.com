@@ -71,7 +71,7 @@ li {
 }
 
 .container {
-	max-width: 100%;
+	width: 100%;
 	@include breakpoint($real-wide) {
 		max-width: 1500px;
 	}
