@@ -2,3 +2,4 @@ node_modules
 .DS_Store
 images-working/iPhone-6-4-7-inch-Three-colors-Mockup-PIXEDEN
 images-working/_big_files
+public/bundle.js
