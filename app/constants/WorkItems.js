@@ -16,7 +16,13 @@ var WorkItems = [
 
 <a href="https://brandybucks.herokuapp.com/"><img src="/img/llama.jpg" class='image border'/></a>
 
-<strong><a href="https://brandybucks.herokuapp.com/" class="link-style">Llama</a></strong> is an app to promote active student records in one source. We recognized a need in the community of students with special needs and their teachers and parents for a succinct record keeping app to address the quantity of mandatory records. We envision quick moments of in-the-moment notes to replace a daily chore of accumulated data entry.`,
+<strong><a href="https://brandybucks.herokuapp.com/" class="link-style">Llama</a></strong> is an app to promote active student records in one source. We recognized a need in the community of students with special needs and their teachers and parents for a succinct record keeping app to address the quantity of mandatory records. We envision quick moments of in-the-moment notes to replace a daily chore of accumulated data entry.
+
+<hr class='rule'></hr>
+
+<a href="https://roast-log.herokuapp.com/"><img src="/img/roastlog.jpg" class='image border'/></a>
+
+<strong><a href="https://roast-log.herokuapp.com/" class="link-style">Coffee roast logging app.</a></strong> Built using Angular and Angular Material, with an Express server and using Amazon s3 buckets for image uploads.`,
 			linkOut: ''
 		}
 	},
@@ -99,14 +105,14 @@ I have many of my last 5 years of photos up on flickr. I hope you'll <a href="ht
 		title: 'Motion',
 		copy: 'Emotion',
 		slide: {
-		longCopy: `<object class="facebookFlash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="520" height="540" id="facebook_top5_MAY_F_WITHLOADER" align="middle">
-<param name="allowScriptAccess" value="sameDomain" />
-<param name="allowFullScreen" value="false" />
-<param name="movie" value="facebook_top5_MAY_F_WITHLOADER.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" />	<embed src="../img/facebook_top5_MAY_F_WITHLOADER.swf" quality="high" bgcolor="#ffffff" width="520" height="540" name="facebook_top5_MAY_F_WITHLOADER" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
-</object>
+// 		longCopy: `<object class="facebookFlash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="520" height="540" id="facebook_top5_MAY_F_WITHLOADER" align="middle">
+// <param name="allowScriptAccess" value="sameDomain" />
+// <param name="allowFullScreen" value="false" />
+// <param name="movie" value="facebook_top5_MAY_F_WITHLOADER.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" />	<embed src="../img/facebook_top5_MAY_F_WITHLOADER.swf" quality="high" bgcolor="#ffffff" width="520" height="540" name="facebook_top5_MAY_F_WITHLOADER" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
+// </object>
 
-<div class="facebookFlash">This is a collaboration with another Graphic Artist, I did the animations. These lived on facebook and were meant to highlight some fun stuff happening each month at Old Navy. It was kind of a random project that didn't last too long but it was really fun to do. I got to put all my studies of the particle generator in After Effects to use to make the BBQ smoke and explode.</div>
-
+// <p class="facebookFlash">This is a collaboration with another Graphic Artist, I did the animations. These lived on facebook and were meant to highlight some fun stuff happening each month at Old Navy. It was kind of a random project that didn't last too long but it was really fun to do. I got to put all my studies of the particle generator in After Effects to use to make the BBQ smoke and explode.</p>
+			longCopy: `
 
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/GXYYGAYln-w" frameborder="0" allowfullscreen></iframe> -->
 
